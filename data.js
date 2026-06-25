@@ -477,6 +477,39 @@ const projects = [
         id: "proj_12",
         image: "assets/ai_dynamic_portfolio_1782391268305.png",
         title: {
+            en: `AI-Powered Dynamic Portfolio & CMS Architecture`,
+            ua: `AI-Powered Dynamic Portfolio & CMS Architecture`
+        },
+        tags: ['Python'],
+        summary: {
+            en: `A premium, ultra-fast and fully custom website portfolio was needed to sell automation services for high checks. The main requirement was the ability to easily scale content — add...`,
+            ua: `Для продажу послуг автоматизації на високі чеки потрібен був преміальний, ультрашвидкий та повністю кастомний вебсайт-портфоліо. Головною вимогою була можливість легко масштабувати...`
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">A premium, ultra-fast and fully custom website portfolio was needed to sell automation services for high checks. The main requirement was the ability to easily scale content — add new cases in a few seconds without the need to write code, work with heavy databases, or constantly administer servers. The site itself was meant to showcase my engineering approach to routine automation.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I developed my own serverless website architecture, which works faster than any builder:<br>1.<strong class="text-white">Frontend:</strong>Written in pure HTML/JS using Tailwind CSS to create a gorgeous dark neon design (Glassmorphism) perfect for AI.<br>2.<strong class="text-white">Own CMS (Content Management System):</strong>Instead of heavy databases, I developed a Python script. It automatically reads plain text Markdown files, translates them through the API into English, parses the found skills and generates a ready-made database (JSON) for the site.<br>3.<strong class="text-white">Hosting and CI/CD:</strong>The site is deployed on GitHub Pages. This means zero server costs, a global CDN for instant downloads anywhere in the world, and site updates simply by dragging and dropping new files into the repository.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">HTML5, Vanilla JavaScript</strong>(Core Logic)<br>-<strong class="text-white">Tailwind CSS</strong>(Premium UI/UX, Glassmorphism)<br>-<strong class="text-white">Python</strong>(Custom Static Site Generator)<br>-<strong class="text-white">Google Translate API</strong>(Automatic localization)<br>-<strong class="text-white">GitHub Pages</strong>(Free Cloud Hosting)<br>-<strong class="text-white">Markdown</strong>(Database Storage)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">$0 hosting costs:</strong>The site is powered by GitHub absolutely free forever.<br>-<strong class="text-white">Instant loading:</strong>Since this is a static site with no database access, it loads in milliseconds, which dramatically increases conversion.<br>-<strong class="text-white">Scalability:</strong>To add 10 new cases, just write a plain text file and the Python agent will do all the other magic. The site serves as a live demonstration of my engineering approach to problem solving.</div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Для продажу послуг автоматизації на високі чеки потрібен був преміальний, ультрашвидкий та повністю кастомний вебсайт-портфоліо. Головною вимогою була можливість легко масштабувати контент — додавати нові кейси за кілька секунд без необхідності писати код, працювати з важкими базами даних чи постійно адмініструвати сервери. Сайт мав сам по собі демонструвати мій інженерний підхід до автоматизації рутини.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Рішення та Архітектура (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Я розробив власну архітектуру "безсерверного" (Serverless) вебсайту, яка працює швидше за будь-який конструктор:<br>1. <strong class="text-white">Frontend:</strong> Написаний на чистому HTML/JS з використанням Tailwind CSS для створення розкішного темного неонового дизайну (Glassmorphism), який ідеально підходить для AI-спеціаліста.<br>2. <strong class="text-white">Власна CMS (Система управління контентом):</strong> Замість важких баз даних, я розробив скрипт на Python. Він автоматично зчитує звичайні текстові Markdown-файли, перекладає їх через API на англійську мову, парсить знайдені скіли та генерує готову базу даних (JSON) для сайту.<br>3. <strong class="text-white">Хостинг та CI/CD:</strong> Сайт розгорнутий на GitHub Pages. Це означає нульові витрати на сервери, глобальну CDN для миттєвого завантаження в будь-якій точці світу та оновлення сайту просто шляхом перетягування нових файлів у репозиторій.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">HTML5, Vanilla JavaScript</strong> (Core Logic)</li><br><li><strong class="text-white">Tailwind CSS</strong> (Premium UI/UX, Glassmorphism)</li><br><li><strong class="text-white">Python</strong> (Custom Static Site Generator)</li><br><li><strong class="text-white">Google Translate API</strong> (Автоматична локалізація)</li><br><li><strong class="text-white">GitHub Pages</strong> (Безкоштовний Cloud Hosting)</li><br><li><strong class="text-white">Markdown</strong> (Зберігання бази даних)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">$0 витрат на хостинг:</strong> Сайт працює на потужностях GitHub абсолютно безкоштовно назавжди.</li><br><li><strong class="text-white">Миттєве завантаження:</strong> Оскільки це статичний сайт без звернень до бази даних, він завантажується за мілісекунди, що різко підвищує конверсію.</li><br><li><strong class="text-white">Масштабованість:</strong> Щоб додати 10 нових кейсів, достатньо просто написати звичайний текстовий файл, а Python-агент зробить всю іншу магію. Сайт слугує живою демонстрацією мого інженерного підходу до вирішення завдань.</li></ul></div>
+`
+        }
+    },
+    {
+        id: "proj_13",
+        image: "assets/ai_video_generator_1782391276846.png",
+        title: {
             en: `AI Video Generator Bot (Image-to-Video Pipeline)`,
             ua: `AI Video Generator Bot (Image-to-Video Pipeline)`
         },
@@ -507,8 +540,8 @@ const projects = [
         }
     },
     {
-        id: "proj_13",
-        image: "assets/ai_video_generator_1782391276846.png",
+        id: "proj_14",
+        image: "assets/audio_transcription_1782391287277.png",
         title: {
             en: `AI Audio & Video Transcription Pipeline (Speaker Diarization)`,
             ua: `AI Audio & Video Transcription Pipeline (Speaker Diarization)`
@@ -540,8 +573,8 @@ const projects = [
         }
     },
     {
-        id: "proj_14",
-        image: "assets/audio_transcription_1782391287277.png",
+        id: "proj_15",
+        image: "assets/autoservice_crm_1782391310439.png",
         title: {
             en: `AI CRM Follow-up & Reputation Management System`,
             ua: `AI CRM Follow-up & Reputation Management System`
@@ -573,8 +606,8 @@ const projects = [
         }
     },
     {
-        id: "proj_15",
-        image: "assets/autoservice_crm_1782391310439.png",
+        id: "proj_16",
+        image: "assets/barbershop_typebot_1782391320979.png",
         title: {
             en: `AI Web Chatbot for Barbershop Network (Typebot + n8n)`,
             ua: `AI Web Chatbot for Barbershop Network (Typebot + n8n)`
@@ -606,8 +639,8 @@ const projects = [
         }
     },
     {
-        id: "proj_16",
-        image: "assets/barbershop_typebot_1782391320979.png",
+        id: "proj_17",
+        image: "assets/linkedin_carousel_1782391332557.png",
         title: {
             en: `LinkedIn PDF Carousel Automator (Custom API Integration)`,
             ua: `LinkedIn PDF Carousel Automator (Custom API Integration)`
@@ -639,8 +672,8 @@ const projects = [
         }
     },
     {
-        id: "proj_17",
-        image: "assets/linkedin_carousel_1782391332557.png",
+        id: "proj_18",
+        image: "assets/omnichannel_sales_1782391343159.png",
         title: {
             en: `Omnichannel AI Sales Funnel (Comments to DMs)`,
             ua: `Omnichannel AI Sales Funnel (Comments to DMs)`
@@ -672,8 +705,8 @@ const projects = [
         }
     },
     {
-        id: "proj_18",
-        image: "assets/omnichannel_sales_1782391343159.png",
+        id: "proj_19",
+        image: "assets/personal_assistant_1782391352348.png",
         title: {
             en: `Personal AI Automation Architect (Lead Gen & Booking Agent)`,
             ua: `Personal AI Automation Architect (Lead Gen & Booking Agent)`
