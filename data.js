@@ -449,8 +449,8 @@ const projects = [
         },
         tags: ['n8n', 'Telegram', 'OpenAI'],
         summary: {
-            en: ``,
-            ua: ``
+            en: `For the online store of goodies, the regular creation of visuals (creatives) for social networks was chaotic. There was no understanding of which product should be advertised today...`,
+            ua: `Для інтернет-магазину смаколиків регулярне створення візуалів (креативів) під соцмережі було хаотичним. Не було розуміння, який саме товар варто рекламувати сьогодні, а створення п...`
         },
         content: {
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
@@ -482,8 +482,8 @@ const projects = [
         },
         tags: ['n8n', 'Vertex AI', 'Telegram', 'Firecrawl'],
         summary: {
-            en: ``,
-            ua: ``
+            en: `For travel agencies, visual content is the main driver of sales. Dynamic hotel videos on Instagram or Telegram convert much better than ordinary static photos. However, hiring vide...`,
+            ua: `Для туристичних агенцій візуальний контент — це головний драйвер продажів. Динамічні відео готелів в Instagram чи Telegram конвертують набагато краще, ніж звичайні статичні фото. П...`
         },
         content: {
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
@@ -515,8 +515,8 @@ const projects = [
         },
         tags: ['n8n', 'OpenAI'],
         summary: {
-            en: ``,
-            ua: ``
+            en: `Manually transcribing meetings, interviews, podcasts, or webinars takes a tremendous amount of time — usually 3-4 times longer than the recording itself. The biggest challenge is n...`,
+            ua: `Ручна транскрибація зустрічей, інтерв'ю, подкастів чи вебінарів займає колосальну кількість часу — зазвичай у 3-4 рази більше, ніж триває сам запис. Найбільшою проблемою є не прост...`
         },
         content: {
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
@@ -548,8 +548,8 @@ const projects = [
         },
         tags: ['n8n', 'Telegram', 'OpenAI'],
         summary: {
-            en: ``,
-            ua: ``
+            en: `For a network of car service centers (STO), it is critical to collect feedback after repairs and to respond instantly to dissatisfied customers. The problem is that masters are bus...`,
+            ua: `Для мережі автосервісів (СТО) критично важливо збирати відгуки після ремонту та миттєво реагувати на незадоволених клієнтів. Проблема в тому, що майстри зайняті роботою і не мають...`
         },
         content: {
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
@@ -581,8 +581,8 @@ const projects = [
         },
         tags: ['n8n', 'OpenAI'],
         summary: {
-            en: ``,
-            ua: ``
+            en: `A chain of barbershops needed a smart web assistant on the site to advise customers on services and prices. Conventional button bots were too primitive, and standard AI solutions h...`,
+            ua: `Мережі барбершопів потрібен був розумний веб-асистент на сайті, який би консультував клієнтів щодо послуг та цін. Звичайні кнопкові боти були занадто примітивними, а стандартні AI-...`
         },
         content: {
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
@@ -614,8 +614,8 @@ const projects = [
         },
         tags: ['n8n', 'LinkedIn', 'PDF RAG'],
         summary: {
-            en: ``,
-            ua: ``
+            en: `PDF carousels are the content format on LinkedIn that delivers the highest reach and conversion. The problem is that it is extremely difficult to automate their publication. The st...`,
+            ua: `PDF-каруселі — це формат контенту на LinkedIn, який дає найвищі охоплення та конверсію. Проблема полягає в тому, що автоматизувати їх публікацію вкрай складно. Стандартний вузол Li...`
         },
         content: {
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
@@ -647,8 +647,8 @@ const projects = [
         },
         tags: ['n8n', 'Gemini', 'Manychat', 'Telegram', 'Facebook'],
         summary: {
-            en: ``,
-            ua: ``
+            en: `Brands and experts lose hot customers simply because they don't have time to quickly respond to Instagram/Facebook comments and convert them to Direct. Manual monitoring of comment...`,
+            ua: `Бренди та експерти втрачають гарячих клієнтів просто тому, що не встигають швидко відповідати на коментарі в Instagram/Facebook та переводити їх у Direct. Ручний моніторинг комента...`
         },
         content: {
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
@@ -680,8 +680,8 @@ const projects = [
         },
         tags: ['n8n', 'Gemini', 'Telegram', 'Google Sheets', 'OpenAI'],
         summary: {
-            en: ``,
-            ua: ``
+            en: `As an automation expert, I was faced with a classic "bootstraps" problem: a lot of time was spent processing incoming inquiries, answering common questions about my services, quali...`,
+            ua: `Як експерт з автоматизації, я стикався з класичною проблемою "чоботаря без чобіт": багато часу йшло на обробку вхідних запитів, відповіді на типові питання про мої послуги, кваліфі...`
         },
         content: {
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
