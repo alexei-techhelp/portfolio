@@ -31,7 +31,8 @@ const translations = {
         stage_5_title: "Stage 5: Result",
         stage_5_text: "Profitability, time saved, and client satisfaction.",
         skills_title: "Tech Stack & Skills",
-        skills_subtitle: "Tools and technologies I use to build scalable automation architectures."
+        skills_subtitle: "Tools and technologies I use to build scalable automation architectures.",
+        skills_footer: "If your business uses a specific custom tool or CRM, don't worry. As an Automation Architect, I quickly learn and integrate new software to implement your exact vision."
     },
     ua: {
         nav_about: "Про мене",
@@ -65,7 +66,8 @@ const translations = {
         stage_5_title: "Етап 5: Результат",
         stage_5_text: "Прибутковість, зекономлений час та задоволеність клієнтів.",
         skills_title: "Технологічний Стек",
-        skills_subtitle: "Інструменти та технології, які я використовую для створення масштабованих архітектур."
+        skills_subtitle: "Інструменти та технології, які я використовую для створення масштабованих архітектур.",
+        skills_footer: "Якщо ваш бізнес використовує специфічну CRM або унікальний софт — це не проблема. Я швидко опановую нові інструменти, щоб реалізувати вашу автоматизацію саме так, як вам потрібно."
     }
 };
 
@@ -435,6 +437,270 @@ const projects = [
 <div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Основа:</strong> Python (Threading, Queues)</li><br><li><strong class="text-white">Audio Engineering:</strong> \`sounddevice\`, \`numpy\`, Custom VAD logic (Voice Activity Detection)</li><br><li><strong class="text-white">ШІ-моделі:</strong> Groq (Whisper-large-v3), NVIDIA Llama 3.1-70B-Instruct, NVIDIA Riva (ASR та TTS)</li><br><li><strong class="text-white">Протоколи зв'язку:</strong> gRPC (для мінімізації затримок з NVIDIA), WebSockets (SocketIO)</li><br><li><strong class="text-white">UI/Інтерфейс:</strong> Local Flask Web Server (для субтитрів у реальному часі)</li></ul></div>
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Impact)</h3>
 <div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Рекордна швидкість (Low Latency):</strong> Відмова від візуального програмування на користь gRPC та чистого коду дозволила зберегти критично важливу 1+ секунду на кожній фразі. Це робить синхронний діалог комфортним для обох сторін.</li><br><li><strong class="text-white">Тотальна оптимізація витрат:</strong> Використання грантових/безкоштовних моделей NVIDIA Riva замість платних API від OpenAI дозволило зробити години синхронного перекладу абсолютно безкоштовними.</li><br><li><strong class="text-white">Безшовна інтеграція:</strong> Застосунок вміє перехоплювати аудіо напряму із системних каналів (Zoom, Google Meet, Slack Huddles), забезпечуючи універсальність роботи на будь-якій платформі.</li><br></ul><br><br>---</div>
+`
+        }
+    },
+    {
+        id: "proj_11",
+        image: "assets/ai_content_factory_1782391258156.png",
+        title: {
+            en: `AI Content Factory & E-commerce Product Manager`,
+            ua: `AI Content Factory & E-commerce Product Manager`
+        },
+        tags: ['n8n', 'Telegram', 'OpenAI'],
+        summary: {
+            en: ``,
+            ua: ``
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">For the online store of goodies, the regular creation of visuals (creatives) for social networks was chaotic. There was no understanding of which product should be advertised today, and creating posts took a lot of time. Another big pain is manually filling out the product database (you need to take a raw photo, come up with a description, and enter it into the database). Workers hated this routine. The store needed a single system that would manage content based on real sales and automate manual work with products.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Architectural logic (The Architecture)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I developed a giant ERP/Content system in the form of a Telegram bot with deep analytics and security:<br>-<strong class="text-white">Security Module (RBAC):</strong>Since AI image generation costs money, I developed a custom access system. The bot does not let anyone in without confirmation from the Main Administrator (who can enable/disable access to managers in one click).<br>-<strong class="text-white">Data-Driven Generation:</strong>The bot does not generate creatives randomly. It synchronizes with<strong class="text-white">SalesDrive CRM</strong>, aggregates sales in the PostgreSQL database and calculates "Hits" and "Seasonality". Based on this analytics, the AI ​​itself selects products, writes specific prompts, and generates images for various social media formats. The manager just clicks "Approve" or "Regenerate".<br>-<strong class="text-white">PIM (Base Filling) module:</strong>Reverse process. The manager simply throws a "raw" screenshot of the product and scraps of text to the bot. AI recognizes the text in the photo, creates a professional, "tasty" description of the product, and automatically sends all this data (picture + description) via Webhook directly to the database.<br>-<strong class="text-white">Smart Search:</strong>Full-fledged AI search on the product database right in the chat for quick consultations.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">n8n</strong>(Core Orchestrator <ul class="list-disc pl-5 my-2 space-y-1"><li>more than 10 complex workflows)</li><br></ul>-<strong class="text-white">Telegram API</strong>(Custom UI with Role-Based Access Control)<br>-<strong class="text-white">SalesDrive CRM</strong>(Source of sales data)<br>-<strong class="text-white">PostgreSQL</strong>(Data Warehousing, Batch Upserts, Analytics)<br>-<strong class="text-white">OpenAI & Image Gen API</strong>(Generation of texts, pictures, screenshot recognition)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">The system completely took over the most boring work in the company (manual filling of product cards), which saved hundreds of hours of personnel. Marketing has become data-driven — now exactly those products that are actually sold (according to CRM) are advertised. The whole process of creating high-quality creatives has been reduced from hours to a few clicks in the messenger, under the reliable financial control of the owner.</div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Для інтернет-магазину смаколиків регулярне створення візуалів (креативів) під соцмережі було хаотичним. Не було розуміння, який саме товар варто рекламувати сьогодні, а створення постів займало багато часу. Інший великий біль — ручне заповнення бази товарів (треба взяти сире фото, придумати опис, внести в базу). Працівники ненавиділи цю рутину. Магазину була потрібна єдина система, яка б керувала контентом на основі реальних продажів та автоматизувала ручну роботу з товарами.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Архітектурна логіка (The Architecture)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Я розробив гігантську ERP/Content систему у вигляді Telegram-бота з глибокою аналітикою та безпекою:<br><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Модуль безпеки (RBAC):</strong> Оскільки AI-генерація зображень коштує грошей, я розробив кастомну систему доступу. Бот не пускає нікого без підтвердження Головного Адміністратора (який може вмикати/вимикати доступ менеджерам в один клік).</li><br><li><strong class="text-white">Data-Driven Генерація:</strong> Бот не генерує креативи навмання. Він синхронізується з <strong class="text-white">SalesDrive CRM</strong>, агрегує продажі в базу PostgreSQL і вираховує "Хіти" та "Сезонність". На основі цієї аналітики ШІ сам обирає товари, пише специфічні промпти і генерує картинки під різні формати соцмереж. Менеджер лише натискає "Схвалити" або "Перегенерувати".</li><br><li><strong class="text-white">Модуль PIM (Заповнення бази):</strong> Зворотній процес. Менеджер просто кидає боту "сирий" скріншот товару та обривки тексту. AI розпізнає текст на фото, створює професійний, "смачний" опис товару, і автоматично відправляє всі ці дані (картинку + опис) через Webhook прямо в базу даних.</li><br><li><strong class="text-white">Smart Search:</strong> Повноцінний ШІ-пошук по базі товарів прямо в чаті для швидких консультацій.</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">n8n</strong> (Core Orchestrator - понад 10 складних воркфлоу)</li><br><li><strong class="text-white">Telegram API</strong> (Custom UI з Role-Based Access Control)</li><br><li><strong class="text-white">SalesDrive CRM</strong> (Джерело даних про продажі)</li><br><li><strong class="text-white">PostgreSQL</strong> (Data Warehousing, Batch Upserts, Аналітика)</li><br><li><strong class="text-white">OpenAI & Image Gen API</strong> (Генерація текстів, картинок, розпізнавання скріншотів)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Система повністю забрала на себе найнуднішу роботу в компанії (ручне заповнення карток товарів), що зекономило сотні годин персоналу. Маркетинг став керуватися даними (Data-Driven) — тепер рекламуються саме ті товари, які реально продаються (згідно з CRM). Весь процес створення високоякісних креативів скоротився з годин до кількох кліків у месенджері, під надійним фінансовим контролем власника.</div>
+`
+        }
+    },
+    {
+        id: "proj_12",
+        image: "assets/ai_dynamic_portfolio_1782391268305.png",
+        title: {
+            en: `AI Video Generator Bot (Image-to-Video Pipeline)`,
+            ua: `AI Video Generator Bot (Image-to-Video Pipeline)`
+        },
+        tags: ['n8n', 'Vertex AI', 'Telegram', 'Firecrawl'],
+        summary: {
+            en: ``,
+            ua: ``
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">For travel agencies, visual content is the main driver of sales. Dynamic hotel videos on Instagram or Telegram convert much better than ordinary static photos. However, hiring video editors for hundreds of hotels is time-consuming and insanely expensive. Agencies needed a tool that would instantly generate engaging short videos based on just the name of the hotel.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I have developed a fully automated video generator that can be controlled directly from Telegram:<br>1.<strong class="text-white">Input data (Telegram):</strong>The manager just needs to send the bot the name of the hotel (for example, "Hilton Bali Resort").<br>2.<strong class="text-white">Scraping (Firecrawl):</strong>n8n instantly activates the Firecrawl search engine, which finds the best, high-quality photos of this hotel on the web.<br>3.<strong class="text-white">Video generation (Google Vertex AI):</strong>The found photo is converted to Base64 format and sent via API to the advanced neural network of Vertex AI (Image-to-Video). <br>4.<strong class="text-white">Asynchronous Polling Loop:</strong>Since the video generation takes some time, I set up a clever wait loop (Webhook Polling Loop) that checks the ready status of the video without overloading the system.<br>5.<strong class="text-white">Delivery (Telegram):</strong>As soon as the video is ready, it is automatically sent to the manager back in Telegram.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">Telegram Bot API</strong>(User Interface)<br>-<strong class="text-white">n8n</strong>(Automation & Orchestration)<br>-<strong class="text-white">Firecrawl</strong>(Web Scraping & AI Search)<br>-<strong class="text-white">Google Vertex AI</strong>(Image-to-Video Generation)<br>-<strong class="text-white">JavaScript & HTTP Requests</strong>(Base64 encoding, Async Polling Loops)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">The speed of creating advertising video content has increased hundreds of times. The manager, without even leaving the messenger, receives a ready-made, animated, dynamic video for social networks in a minute instead of a boring picture. This made it possible to generate an endless stream of high-converting content without the involvement of video production, which saved the agency thousands of dollars in creating creatives.</div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Для туристичних агенцій візуальний контент — це головний драйвер продажів. Динамічні відео готелів в Instagram чи Telegram конвертують набагато краще, ніж звичайні статичні фото. Проте наймати відеомонтажерів для сотень готелів — це довго і шалено дорого. Агенціям був потрібен інструмент, який би миттєво генерував захоплюючі короткі відеоролики лише за назвою готелю.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Рішення та Архітектура (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Я розробив повністю автоматизований генератор відео, яким можна керувати прямо з Telegram:<br>1. <strong class="text-white">Вхідні дані (Telegram):</strong> Менеджеру достатньо просто відправити боту назву готелю (наприклад, "Hilton Bali Resort").<br>2. <strong class="text-white">Scraping (Firecrawl):</strong> n8n миттєво активує пошуковий рушій Firecrawl, який знаходить у мережі найкращі, високоякісні фотографії цього готелю.<br>3. <strong class="text-white">Генерація відео (Google Vertex AI):</strong> Знайдене фото конвертується у формат Base64 і відправляється через API до передової нейромережі Vertex AI (Image-to-Video). <br>4. <strong class="text-white">Асинхронний Polling Loop:</strong> Оскільки генерація відео займає певний час, я налаштував хитрий цикл очікування (Webhook Polling Loop), який перевіряє статус готовності відео, не перевантажуючи систему.<br>5. <strong class="text-white">Доставка (Telegram):</strong> Як тільки відео готове, воно автоматично відправляється менеджеру назад у Telegram.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Telegram Bot API</strong> (Інтерфейс користувача)</li><br><li><strong class="text-white">n8n</strong> (Automation & Orchestration)</li><br><li><strong class="text-white">Firecrawl</strong> (Web Scraping & AI Search)</li><br><li><strong class="text-white">Google Vertex AI</strong> (Image-to-Video Generation)</li><br><li><strong class="text-white">JavaScript & HTTP Requests</strong> (Base64 encoding, Async Polling Loops)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Швидкість створення рекламного відео-контенту зросла в сотні разів. Менеджер, навіть не виходячи з месенджера, за хвилину отримує готове, анімоване, динамічне відео для соцмереж замість нудної картинки. Це дозволило генерувати нескінченний потік висококонверсійного контенту без залучення відеопродакшену, що зекономило агенції тисячі доларів на створенні креативів.</div>
+`
+        }
+    },
+    {
+        id: "proj_13",
+        image: "assets/ai_video_generator_1782391276846.png",
+        title: {
+            en: `AI Audio & Video Transcription Pipeline (Speaker Diarization)`,
+            ua: `AI Audio & Video Transcription Pipeline (Speaker Diarization)`
+        },
+        tags: ['n8n', 'OpenAI'],
+        summary: {
+            en: ``,
+            ua: ``
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Manually transcribing meetings, interviews, podcasts, or webinars takes a tremendous amount of time — usually 3-4 times longer than the recording itself. The biggest challenge is not just to recognize the text, but to understand<strong class="text-white">who exactly is speaking</strong>(do a breakdown by speakers) so that the text makes sense. A business needs a tool that would automatically convert raw media files into ready-made, formatted text documents for further processing (creating summaries, meeting minutes, articles).</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I've developed a fully self-contained pipeline based on<strong class="text-white">n8n</strong>that takes all the routine work out of it:<br>1.<strong class="text-white">Search and Download:</strong>The script automatically scans Google Drive (or runs manually), finds new audio/video files and downloads them.<br>2.<strong class="text-white">AI Transcription:</strong>The file is transferred to OpenAI (Whisper API) for high-precision speech recognition with a mandatory breakdown by speaker (Speaker Diarization).<br>3.<strong class="text-white">Processing and Formatting (Data Aggregation):</strong>The recognized text passes through the formatting nodes, where the replicas are gathered into a heap and structured in a readable form.<br>4.<strong class="text-white">Document Generation:</strong>The system automatically creates a new Google Doc, fills it with a transcript and saves it next to the original file. <br><br>This document is now ready for another AI agent (such as ChatGPT or Claude) to extract key points or tasks from it.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">n8n</strong>(Automation Engine)<br>-<strong class="text-white">OpenAI (Whisper)</strong>(Speech-to-Text & Diarization)<br>-<strong class="text-white">Google Drive API</strong>(Media storage)<br>-<strong class="text-white">Google Docs API</strong>(Generation of reports)<br>-<strong class="text-white">Data Manipulation (Aggregate & Edit Fields)</strong>(Structuring JSON data)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">Time Savings:</strong>A process that used to require hours of tedious manual labor now happens in the background in minutes.<br>-<strong class="text-white">Scalability:</strong>Ability to process dozens of records daily without additional staff costs.<br>-<strong class="text-white">Readiness for AI processing:</strong>The resulting clean text is ideal for further automatic generation of minutes (Meeting Minutes), posts or analytics.</div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Ручна транскрибація зустрічей, інтерв'ю, подкастів чи вебінарів займає колосальну кількість часу — зазвичай у 3-4 рази більше, ніж триває сам запис. Найбільшою проблемою є не просто розпізнати текст, а зрозуміти, <strong class="text-white">хто саме говорить</strong> (робити розбивку по спікерах), щоб текст мав сенс. Бізнесу потрібен інструмент, який би автоматично перетворював сирі медіа-файли на готові, відформатовані текстові документи для подальшої обробки (створення саммарі, протоколів зустрічей, статей).</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Рішення та Архітектура (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Я розробив повністю автономний конвеєр на базі <strong class="text-white">n8n</strong>, який забирає на себе всю рутину:<br>1. <strong class="text-white">Пошук та Завантаження:</strong> Сценарій автоматично сканує Google Drive (або запускається вручну), знаходить нові аудіо/відео файли та завантажує їх.<br>2. <strong class="text-white">AI Транскрибація:</strong> Файл передається до OpenAI (Whisper API) для високоточного розпізнавання мови з обов'язковою розбивкою по спікерах (Speaker Diarization).<br>3. <strong class="text-white">Обробка та Форматування (Data Aggregation):</strong> Розпізнаний текст проходить через вузли форматування, де репліки збираються до купи і структуруються в зручний для читання вигляд.<br>4. <strong class="text-white">Генерація Документу:</strong> Система автоматично створює новий Google Doc, заповнює його транскриптом і зберігає поруч із оригінальним файлом. <br><br>Тепер цей документ готовий до того, щоб інший AI-агент (наприклад, ChatGPT або Claude) витягнув з нього головні тези чи завдання.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">n8n</strong> (Automation Engine)</li><br><li><strong class="text-white">OpenAI (Whisper)</strong> (Speech-to-Text & Diarization)</li><br><li><strong class="text-white">Google Drive API</strong> (Сховище медіа)</li><br><li><strong class="text-white">Google Docs API</strong> (Генерація звітів)</li><br><li><strong class="text-white">Data Manipulation (Aggregate & Edit Fields)</strong> (Структурування JSON-даних)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Економія часу:</strong> Процес, який раніше вимагав годин нудної ручної праці, тепер відбувається у фоні за кілька хвилин.</li><br><li><strong class="text-white">Масштабованість:</strong> Можливість обробляти десятки записів щодня без додаткових витрат на персонал.</li><br><li><strong class="text-white">Готовність до AI-обробки:</strong> Отриманий чистий текст ідеально підходить для подальшої автоматичної генерації протоколів (Meeting Minutes), постів або аналітики.</li></ul></div>
+`
+        }
+    },
+    {
+        id: "proj_14",
+        image: "assets/audio_transcription_1782391287277.png",
+        title: {
+            en: `AI CRM Follow-up & Reputation Management System`,
+            ua: `AI CRM Follow-up & Reputation Management System`
+        },
+        tags: ['n8n', 'Telegram', 'OpenAI'],
+        summary: {
+            en: ``,
+            ua: ``
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">For a network of car service centers (STO), it is critical to collect feedback after repairs and to respond instantly to dissatisfied customers. The problem is that masters are busy with work and do not have time to write messages (follow-ups). Satisfied customers rarely leave reviews themselves, and dissatisfied customers may leave forever if their problem is not noticed in time. The network needed a system that would automatically communicate after the visit without distracting staff.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Architectural logic (The Architecture)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I developed a multi-level AI system deeply integrated with<strong class="text-white">SalesDrive CRM</strong>. Logic is divided into 3 key modules:<br><br>-<strong class="text-white">Routing module (Multi-channel Fallback):</strong>When the client's status in CRM changes (Webhook), the system generates a message. Since most customers use Viber, the system first sends the request via e-chat. If the delivery failed (the system checks the status), the algorithm automatically switches and sends a message to Telegram, updating the communication channel in the database.<br>-<strong class="text-white">AI communication module:</strong>The AI ​​agent knows the entire history of the client and generates messages according to the current status in CRM. He asks about the quality of the service and conducts a lively dialogue.<br>-<strong class="text-white">Sentiment Routing module:</strong><br>  <ul class="list-disc pl-5 my-2 space-y-1"><li>If the client is satisfied — the AI gently suggests leaving a review and sends a link to Google Maps.</li><br></ul>  <ul class="list-disc pl-5 my-2 space-y-1"><li>If the client is dissatisfied (negative) — AI works as a "fire extinguisher": it calms the client down and<strong class="text-white">instantly sends an emergency notification to the master</strong>so that he can urgently intervene and solve the problem.</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">n8n</strong>(Core Automation & Logic Routing)<br>-<strong class="text-white">SalesDrive CRM</strong>(Webhooks & Status Triggers)<br>-<strong class="text-white">OpenAI Agent</strong>(Sentiment Analysis & Dialog Management)<br>-<strong class="text-white">e-chat API (Viber) & Telegram API</strong>(Omnichannel messaging)<br>-<strong class="text-white">SQL Database</strong>(Tracking message delivery status & fallbacks)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">The car service received a system that works like an ideal quality control department. Masters no longer waste time on correspondence <ul class="list-disc pl-5 my-2 space-y-1"><li>they intervene only when the system detects a negative (which allows you to save the client). At the same time, the number of positive reviews on Google Maps has increased dramatically, as the system automatically and politely asks each satisfied customer about it in a messenger convenient for him.</li></ul></div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Для мережі автосервісів (СТО) критично важливо збирати відгуки після ремонту та миттєво реагувати на незадоволених клієнтів. Проблема в тому, що майстри зайняті роботою і не мають часу писати повідомлення (фолоуапи). Задоволені клієнти рідко залишають відгуки самі, а незадоволені можуть піти назавжди, якщо їхню проблему вчасно не помітити. Мережі потрібна була система, яка б автоматично вела комунікацію після візиту, не відволікаючи персонал.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Архітектурна логіка (The Architecture)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Я розробив багаторівневу AI-систему, глибоко інтегровану з <strong class="text-white">SalesDrive CRM</strong>. Логіка поділена на 3 ключові модулі:<br><br><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Модуль маршрутизації (Multi-channel Fallback):</strong> Коли статус клієнта в CRM змінюється (Webhook), система формує повідомлення. Оскільки більшість клієнтів використовує Viber, система спочатку відправляє запит через e-chat. Якщо доставка не вдалася (система перевіряє статус), алгоритм автоматично перемикається і відправляє повідомлення в Telegram, оновлюючи канал зв'язку в базі.</li><br><li><strong class="text-white">Модуль AI-комунікації:</strong> AI-агент знає всю історію клієнта і генерує повідомлення відповідно до поточного статусу в CRM. Він запитує про якість сервісу і веде живий діалог.</li><br><li><strong class="text-white">Модуль маршрутизації відгуків (Sentiment Routing):</strong> </li><br></ul>  <ul class="list-disc pl-5 my-2 space-y-1"><li>Якщо клієнт задоволений — ШІ м'яко пропонує залишити відгук та відправляє посилання на Google Maps.</li><br></ul>  <ul class="list-disc pl-5 my-2 space-y-1"><li>Якщо клієнт незадоволений (негатив) — ШІ працює як "вогнегасник": він заспокоює клієнта і <strong class="text-white">миттєво відправляє екстрене сповіщення майстру</strong>, щоб той терміново втрутився і вирішив проблему.</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">n8n</strong> (Core Automation & Logic Routing)</li><br><li><strong class="text-white">SalesDrive CRM</strong> (Webhooks & Status Triggers)</li><br><li><strong class="text-white">OpenAI Agent</strong> (Sentiment Analysis & Dialog Management)</li><br><li><strong class="text-white">e-chat API (Viber) & Telegram API</strong> (Omnichannel messaging)</li><br><li><strong class="text-white">SQL Database</strong> (Tracking message delivery status & fallbacks)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Автосервіс отримав систему, яка працює як ідеальний відділ контролю якості. Майстри більше не витрачають час на переписки — вони втручаються лише тоді, коли система фіксує негатив (що дозволяє врятувати клієнта). Водночас, кількість позитивних відгуків на Google Maps різко зросла, оскільки система автоматично і ввічливо просить про це кожного задоволеного клієнта у зручному для нього месенджері.</div>
+`
+        }
+    },
+    {
+        id: "proj_15",
+        image: "assets/autoservice_crm_1782391310439.png",
+        title: {
+            en: `AI Web Chatbot for Barbershop Network (Typebot + n8n)`,
+            ua: `AI Web Chatbot for Barbershop Network (Typebot + n8n)`
+        },
+        tags: ['n8n', 'OpenAI'],
+        summary: {
+            en: ``,
+            ua: ``
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">A chain of barbershops needed a smart web assistant on the site to advise customers on services and prices. Conventional button bots were too primitive, and standard AI solutions had a critical flaw: if the client accidentally refreshed the page or closed the browser, the dialog was reset and he had to start all over again. The business needed a bot with "long-term memory" that would feel like a living administrator.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I designed a connection from two powerful tools, separating Frontend and Backend:<br>1.<strong class="text-white">Frontend (Typebot):</strong>Typebot acted as an interface for communication. To solve the problem of losing the dialog when refreshing the page, I activated the native function<strong class="text-white">"Remember User"</strong>(with saving in the Local Storage of the browser). Now Typebot itself remembers the user.<br>2.<strong class="text-white">Backend (n8n + AI Agent):</strong>Typebot sends requests via Webhook directly to n8n, where they are processed by an autonomous AI agent.<br>3.<strong class="text-white">Memory (AI Memory):</strong>Inside the n8n, the AI ​​agent is connected to the memory module. Thanks to the combination of Typebot's local storage and the agent's memory in n8n, a customer can ask about a beard trim, close the site, come back in a month <ul class="list-disc pl-5 my-2 space-y-1"><li>and the dialogue will continue from exactly the same place!</li><br></ul>4.<strong class="text-white">Objection handling:</strong>The AI ​​agent is configured to act as a professional salesperson. If the client asks for a service that does not exist (for example, eyebrow correction), the bot politely refuses, but immediately offers an alternative <ul class="list-disc pl-5 my-2 space-y-1"><li>a premium complex (Head + Beard).</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">Typebot</strong>(Frontend Web Chat UI)<br>-<strong class="text-white">n8n</strong>(Backend Logic & Webhooks)<br>-<strong class="text-white">OpenAI / ChatGPT</strong>(LLM Agent)<br>-<strong class="text-white">AI Memory Management</strong>(Persistent Session Storage)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">The network got a smart digital administrator, who not only consults 24/7, but also actively does<strong class="text-white">Upsell</strong>(offers more expensive sets of services). Thanks to the "seamless" memory of sessions, conversion to recording has increased significantly, because users are no longer annoyed by the loss of context when refreshing the browser page.</div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Мережі барбершопів потрібен був розумний веб-асистент на сайті, який би консультував клієнтів щодо послуг та цін. Звичайні кнопкові боти були занадто примітивними, а стандартні AI-рішення мали критичний недолік: якщо клієнт випадково оновлював сторінку або закривав браузер, діалог скидався, і йому доводилося починати все спочатку. Бізнесу потрібен був бот з "довгостроковою пам'яттю", який би відчувався як живий адміністратор.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Рішення та Архітектура (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Я спроєктував зв'язку з двох потужних інструментів, розділивши Frontend та Backend:<br>1. <strong class="text-white">Frontend (Typebot):</strong> Інтерфейсом для спілкування виступив Typebot. Щоб вирішити проблему втрати діалогу при оновленні сторінки, я активував нативну функцію <strong class="text-white">"Remember User"</strong> (зі збереженням у Local Storage браузера). Тепер Typebot сам запам'ятовує користувача.<br>2. <strong class="text-white">Backend (n8n + AI Agent):</strong> Typebot відправляє запити через Webhook безпосередньо в n8n, де їх обробляє автономний AI-агент.<br>3. <strong class="text-white">Пам'ять (AI Memory):</strong> Всередині n8n AI-агент підключений до модуля пам'яті. Завдяки комбінації локального сховища Typebot та пам'яті агента в n8n, клієнт може запитати про стрижку бороди, закрити сайт, повернутися через місяць — і діалог продовжиться рівно з того самого місця!<br>4. <strong class="text-white">Обробка заперечень:</strong> ШІ-агент налаштований діяти як професійний сейлз. Якщо клієнт просить послугу, якої немає (наприклад, корекцію брів), бот ввічливо відмовляє, але одразу пропонує альтернативу — преміальний комплекс (Голова + Борода).</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Typebot</strong> (Frontend Web Chat UI)</li><br><li><strong class="text-white">n8n</strong> (Backend Logic & Webhooks)</li><br><li><strong class="text-white">OpenAI / ChatGPT</strong> (LLM Agent)</li><br><li><strong class="text-white">AI Memory Management</strong> (Persistent Session Storage)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Мережа отримала розумного цифрового адміністратора, який не лише консультує 24/7, але й активно робить <strong class="text-white">Upsell</strong> (пропонує дорожчі комплекси послуг). Завдяки "безшовній" пам'яті сесій, конверсія у запис значно зросла, адже користувачі більше не дратуються через втрату контексту при оновленні сторінки браузера.</div>
+`
+        }
+    },
+    {
+        id: "proj_16",
+        image: "assets/barbershop_typebot_1782391320979.png",
+        title: {
+            en: `LinkedIn PDF Carousel Automator (Custom API Integration)`,
+            ua: `LinkedIn PDF Carousel Automator (Custom API Integration)`
+        },
+        tags: ['n8n', 'LinkedIn', 'PDF RAG'],
+        summary: {
+            en: ``,
+            ua: ``
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">PDF carousels are the content format on LinkedIn that delivers the highest reach and conversion. The problem is that it is extremely difficult to automate their publication. The standard LinkedIn node in n8n (as in most other services) supports only text or images. To publish a PDF, marketers had to do it manually, which made it impossible to automatically plan a content strategy a month in advance.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Instead of relying on off-the-shelf nodes, I developed a custom architecture, directly integrating with the fairly complex LinkedIn API (UGC Posts). Working with the API was broken down into a strict sequence of steps (as seen in the diagram):<br>1.<strong class="text-white">Authorization and Initialization (HTTP Request 1 & 2):</strong>The script accesses the LinkedIn API, receives the author's URN, and registers the document upload session (gets a special link to download the file).<br>2.<strong class="text-white">Get content (Google Drive):</strong>The pipeline automatically downloads the target PDF file from the cloud storage.<br>3.<strong class="text-white">Binary download (HTTP Request 3):</strong>A special HTTP request sends the physical file itself (binary data) to LinkedIn's media servers, observing strict requirements for headers.<br>4.<strong class="text-white">Publish (HTTP Request 4):</strong>The last node forms a complex JSON object that combines the written text of the post with the uploaded PDF document (Asset URN) and publishes it to the feed.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">n8n</strong>(Core Engine)<br>-<strong class="text-white">LinkedIn API v2</strong>(UGC Posts, Asset Uploads)<br>-<strong class="text-white">Google Drive API</strong>(File Storage)<br>-<strong class="text-white">REST API & HTTP Requests</strong>(Working with binary data, custom JSON payloads, Headers)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Marketing teams have been given the opportunity to 100% automate the publication of the most effective format on LinkedIn. Now you can throw 30 PDF files in Google Drive, and the system itself will publish them on a schedule. This project also perfectly demonstrates the ability to go beyond the standard n8n "cubes" and work with complex documentation of third-party APIs directly.</div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">PDF-каруселі — це формат контенту на LinkedIn, який дає найвищі охоплення та конверсію. Проблема полягає в тому, що автоматизувати їх публікацію вкрай складно. Стандартний вузол LinkedIn в n8n (як і в більшості інших сервісів) підтримує лише текст або картинки. Щоб опублікувати PDF, маркетологам доводилося робити це вручну, що унеможливлювало автоматичне планування контент-стратегії на місяць вперед.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Рішення та Архітектура (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Замість того, щоб спиратися на готові вузли, я розробив кастомну архітектуру, напряму інтегрувавшись із досить складною LinkedIn API (UGC Posts). Робота з API була розбита на строгу послідовність кроків (як видно на схемі):<br>1. <strong class="text-white">Авторизація та Ініціалізація (HTTP Request 1 & 2):</strong> Скрипт звертається до LinkedIn API, отримує URN автора та реєструє сесію завантаження документу (отримує спеціальне посилання для завантаження файлу).<br>2. <strong class="text-white">Отримання контенту (Google Drive):</strong> Конвеєр автоматично завантажує цільовий PDF-файл із хмарного сховища.<br>3. <strong class="text-white">Бінарне завантаження (HTTP Request 3):</strong> Спеціальний HTTP-запит відправляє сам фізичний файл (binary data) на медіа-сервери LinkedIn, дотримуючись суворих вимог до заголовків (Headers).<br>4. <strong class="text-white">Публікація (HTTP Request 4):</strong> Останній вузол формує складний JSON-об'єкт, який об'єднує написаний текст посту із завантаженим PDF-документом (Asset URN), і публікує його в стрічку.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">n8n</strong> (Core Engine)</li><br><li><strong class="text-white">LinkedIn API v2</strong> (UGC Posts, Asset Uploads)</li><br><li><strong class="text-white">Google Drive API</strong> (File Storage)</li><br><li><strong class="text-white">REST API & HTTP Requests</strong> (Робота з бінарними даними, кастомні JSON-пейлоади, Headers)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Маркетингові команди отримали можливість на 100% автоматизувати публікацію найефективнішого формату на LinkedIn. Тепер можна закинути 30 PDF-файлів у Google Drive, і система сама буде публікувати їх за розкладом. Цей проєкт також чудово демонструє здатність виходити за межі стандартних "кубиків" n8n і працювати зі складною документацією чужих API напряму.</div>
+`
+        }
+    },
+    {
+        id: "proj_17",
+        image: "assets/linkedin_carousel_1782391332557.png",
+        title: {
+            en: `Omnichannel AI Sales Funnel (Comments to DMs)`,
+            ua: `Omnichannel AI Sales Funnel (Comments to DMs)`
+        },
+        tags: ['n8n', 'Gemini', 'Manychat', 'Telegram', 'Facebook'],
+        summary: {
+            en: ``,
+            ua: ``
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Brands and experts lose hot customers simply because they don't have time to quickly respond to Instagram/Facebook comments and convert them to Direct. Manual monitoring of comments and correspondence in direct takes a lot of time and does not scale well. The business needed a system that would "catch" every comment and automatically turn it into a full-fledged dialogue in private messages.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I developed a multi-level omnichannel system (Omnichannel) that combines Facebook, Instagram and Telegram into a single AI-brain:<br>1.<strong class="text-white">Tier 1 (Comment Catcher):</strong>The system checks for new comments under posts via the Graph API on a schedule. If a comment is found, AI (Gemini) analyzes it, posts a relevant response under the post and<strong class="text-white">immediately sends a personalized message in Direct</strong>to the customer.<br>2.<strong class="text-white">Tier 2 (The Closer):</strong>As soon as the customer responds in direct, he is picked up by the main AI agent. Traffic from Meta is routed through Webhooks (Manychat), and from Telegram through a custom Userbot, flowing into a single backend on n8n.<br>3.<strong class="text-white">Omnichannel Memory (SQL Database):</strong>Instead of standard memory, I built deep integration with SQL database. The entire interaction history is recorded in the database. When the AI ​​forms a response, it makes SQL queries to remember who this user is, when they left a comment, and what they talked about a week ago (even if they switched from Instagram to Telegram).<br>4.<strong class="text-white">Vector Store (RAG):</strong>An agent is connected to the company's knowledge base to answer specific questions about goods or services.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">n8n</strong>(Core Backend)<br>-<strong class="text-white">Manychat & Telegram Userbot API</strong>(Routing & Messaging)<br>-<strong class="text-white">Instagram / Facebook Graph API</strong>(Comment & DM automation)<br>-<strong class="text-white">SQL Database</strong>(PostgreSQL) (Custom Persistent Memory)<br>-<strong class="text-white">OpenAI (GPT-4o) & Gemini</strong>(LLM & Fallback logic)<br>-<strong class="text-white">Vector Store</strong>(RAG Knowledge Base)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Zero lost leads. The system instantly reacts to any activity under the posts, seamlessly pulls users from the public plane into private messages and autonomously guides them through the sales funnel. Thanks to a single SQL memory, the AI ​​feels like an extremely attentive live manager who remembers every detail of past conversations.</div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Бренди та експерти втрачають гарячих клієнтів просто тому, що не встигають швидко відповідати на коментарі в Instagram/Facebook та переводити їх у Direct. Ручний моніторинг коментарів і переписка в діректі забирають купу часу і погано масштабуються. Бізнесу потрібна була система, яка б "ловила" кожен коментар і автоматично перетворювала його на повноцінний діалог у приватних повідомленнях.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Рішення та Архітектура (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Я розробив багаторівневу омніканальну систему (Omnichannel), яка об'єднує Facebook, Instagram та Telegram в єдиний AI-мозок:<br>1. <strong class="text-white">Tier 1 (Comment Catcher):</strong> За розкладом система перевіряє нові коментарі під постами через Graph API. Якщо коментар знайдено, AI (Gemini) аналізує його, публікує релевантну відповідь під постом і <strong class="text-white">одразу ж відправляє персоналізоване повідомлення в Direct</strong> клієнту.<br>2. <strong class="text-white">Tier 2 (The Closer):</strong> Як тільки клієнт відповідає в діректі, його підхоплює основний AI-агент. Трафік з Meta маршрутизується через Webhooks (Manychat), а з Telegram — через кастомний Userbot, стікаючись у єдиний бекенд на n8n.<br>3. <strong class="text-white">Omnichannel Memory (SQL Database):</strong> Замість стандартної пам'яті я побудував глибоку інтеграцію з SQL-базою даних. Вся історія взаємодії записується в БД. Коли AI формує відповідь, він робить SQL-запити, щоб згадати, хто цей користувач, коли він залишав коментар і про що з ним спілкувалися тиждень тому (навіть якщо він перейшов з Інсти в Телеграм).<br>4. <strong class="text-white">Vector Store (RAG):</strong> Агент підключений до бази знань компанії, щоб відповідати на специфічні запитання щодо товарів чи послуг.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">n8n</strong> (Core Backend)</li><br><li><strong class="text-white">Manychat & Telegram Userbot API</strong> (Routing & Messaging)</li><br><li><strong class="text-white">Instagram / Facebook Graph API</strong> (Comment & DM automation)</li><br><li><strong class="text-white">SQL Database</strong> (PostgreSQL) (Custom Persistent Memory)</li><br><li><strong class="text-white">OpenAI (GPT-4o) & Gemini</strong> (LLM & Fallback logic)</li><br><li><strong class="text-white">Vector Store</strong> (RAG Knowledge Base)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Нуль втрачених лідів. Система миттєво реагує на будь-яку активність під постами, безшовно затягує користувачів із публічної площини в приватні повідомлення і автономно веде їх по воронці продажів. Завдяки єдиній SQL-пам'яті, AI відчувається як надзвичайно уважний живий менеджер, який пам'ятає кожну деталь минулих розмов.</div>
+`
+        }
+    },
+    {
+        id: "proj_18",
+        image: "assets/omnichannel_sales_1782391343159.png",
+        title: {
+            en: `Personal AI Automation Architect (Lead Gen & Booking Agent)`,
+            ua: `Personal AI Automation Architect (Lead Gen & Booking Agent)`
+        },
+        tags: ['n8n', 'Gemini', 'Telegram', 'Google Sheets', 'OpenAI'],
+        summary: {
+            en: ``,
+            ua: ``
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">As an automation expert, I was faced with a classic "bootstraps" problem: a lot of time was spent processing incoming inquiries, answering common questions about my services, qualifying leads, and scheduling calls. I needed a full-fledged digital clone <ul class="list-disc pl-5 my-2 space-y-1"><li>an AI assistant that would not just "chat", but work as a professional sales manager 24/7, independently leading the client to book a consultation.</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I developed a complex AI-Agent in the n8n environment with an interface in Telegram, which performs a complete Pre-sales cycle:<br>1.<strong class="text-white">Deep Persona (9500+ tokens):</strong>The agent is controlled by a giant system prompt that strictly regulates the structure of the dialogue, adaptation to the niche (small business, corporations, NGOs), processing of objections and tone of voice.<br>2.<strong class="text-white">Autonomous tools (Tool Calling):</strong>AI independently decides when to call third-party APIs. It has access to tools for checking my Google Calendar in real time, creating and canceling events.<br>3.<strong class="text-white">Post-Booking Analytics:</strong>The most important feature — as soon as the client books an appointment, the system takes the entire correspondence history, analyzes it and creates a short, comprehensive Summary (client pain, niche, request). I don't need to read long chats before calling <ul class="list-disc pl-5 my-2 space-y-1"><li>I see the point right away.</li><br></ul>4.<strong class="text-white">Automatic CRM (Google Sheets):</strong>All contact data (name, email, phone) together with Summary are automatically recorded in a structured table.<br>5.<strong class="text-white">Reliability:</strong>PostgreSQL is used for the eternal memory of dialogues (Chat Memory), and Fallback is configured (if OpenAI is not available, the request is automatically intercepted by the Gemini model).</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">n8n</strong>(Orchestration & Agent execution)<br>-<strong class="text-white">OpenAI & Gemini</strong>(LLMs, Tool Calling, Fallback logic)<br>-<strong class="text-white">Google Calendar API</strong>(Real-time scheduling)<br>-<strong class="text-white">Google Sheets API</strong>(CRM Database)<br>-<strong class="text-white">PostgreSQL</strong>(Persistent Chat Memory)<br>-<strong class="text-white">Telegram API</strong>(User Interface)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">100% automation of lead qualification and appointment booking process. Customers receive instant, highly personalized service 24/7. I save dozens of hours on the routine and come to the consultation as prepared as possible thanks to the AI ​​brief, which dramatically increases the chances of successfully closing the deal. This bot is my best case study because it demonstrates my level of expertise to clients before we even meet for the first time.</div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Як експерт з автоматизації, я стикався з класичною проблемою "чоботаря без чобіт": багато часу йшло на обробку вхідних запитів, відповіді на типові питання про мої послуги, кваліфікацію лідів та підбір часу для дзвінків. Мені був потрібен повноцінний цифровий клон — ШІ-асистент, який би не просто "балакав", а працював як професійний менеджер з продажу 24/7, самостійно доводячи клієнта до бронювання консультації.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Рішення та Архітектура (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Я розробив складного AI-Агента в середовищі n8n з інтерфейсом у Telegram, який виконує повний цикл Pre-sales:<br>1. <strong class="text-white">Deep Persona (9500+ токенів):</strong> Агент керується гігантським системним промптом, який жорстко регламентує структуру діалогу, адаптацію під нішу (малий бізнес, корпорації, NGO), обробку заперечень та tone of voice.<br>2. <strong class="text-white">Автономні інструменти (Tool Calling):</strong> ШІ самостійно вирішує, коли викликати сторонні API. Він має доступ до інструментів перевірки мого Google Календаря в реальному часі, створення та скасування подій.<br>3. <strong class="text-white">Post-Booking Аналітика:</strong> Найважливіша фіча — як тільки клієнт бронює час, система бере всю історію переписки, аналізує її та створює коротке, вичерпне Summary (біль клієнта, ніша, запит). Мені не потрібно читати довжелезні чати перед дзвінком — я одразу бачу суть.<br>4. <strong class="text-white">Автоматична CRM (Google Sheets):</strong> Всі контактні дані (ім'я, email, телефон) разом із Summary автоматично записуються в структуровану таблицю.<br>5. <strong class="text-white">Надійність:</strong> Використовується PostgreSQL для вічної пам'яті діалогів (Chat Memory), а також налаштований Fallback (якщо OpenAI недоступний, запит автоматично перехоплює модель Gemini).</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">n8n</strong> (Orchestration & Agent execution)</li><br><li><strong class="text-white">OpenAI & Gemini</strong> (LLMs, Tool Calling, Fallback logic)</li><br><li><strong class="text-white">Google Calendar API</strong> (Real-time scheduling)</li><br><li><strong class="text-white">Google Sheets API</strong> (CRM Database)</li><br><li><strong class="text-white">PostgreSQL</strong> (Persistent Chat Memory)</li><br><li><strong class="text-white">Telegram API</strong> (User Interface)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">100% автоматизація процесу кваліфікації лідів та бронювання зустрічей. Клієнти отримують миттєвий, високоперсоналізований сервіс 24/7. Я ж заощаджую десятки годин на рутині і приходжу на консультацію максимально підготовленим завдяки ШІ-брифу, що різко підвищує шанси на успішне закриття угоди. Цей бот є моїм найкращим кейсом, оскільки демонструє клієнтам мій рівень експертизи ще до нашої першої зустрічі.</div>
 `
         }
     },
