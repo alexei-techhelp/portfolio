@@ -41,7 +41,7 @@ def translate_ua_to_en(text):
 
 proj_idx = 0
 for i, section in enumerate(sections):
-    if not section.strip() or "Portfolio" in section.split('\n')[0]:
+    if not section.strip() or i == 0:
         continue
     
     lines = section.strip().split('\n')
@@ -100,7 +100,7 @@ for i, section in enumerate(sections):
         p_html_ua = parse_md_to_html(p)
         p_html_en = parse_md_to_html(p_en)
         
-        if "Проблема" in h3 and not summary_ua:
+        if "проблема" in h3.lower() and not summary_ua:
             clean_p_ua = re.sub(r'<[^>]+>', '', p).replace('\n', ' ')
             summary_ua = clean_p_ua[:180].strip() + "..."
             clean_p_en = re.sub(r'<[^>]+>', '', p_en).replace('\n', ' ')
@@ -119,7 +119,6 @@ for i, section in enumerate(sections):
 
     images_array = [
         "assets/ai_content.png",
-        "assets/content_v2.png",
         "assets/ecommerce_banner.png",
         "assets/event_crm.png",
         "assets/influencer.png",
@@ -128,7 +127,17 @@ for i, section in enumerate(sections):
         "assets/n8n_arch.png",
         "assets/telegram.png",
         "assets/travel.png",
-        "assets/voice_banner.png"
+        "assets/voice_banner.png",
+        "assets/ai_content_factory_1782391258156.png",
+        "assets/google_ads_dashboard.png",
+        "assets/ai_dynamic_portfolio_1782391268305.png",
+        "assets/ai_video_generator_1782391276846.png",
+        "assets/audio_transcription_1782391287277.png",
+        "assets/autoservice_crm_1782391310439.png",
+        "assets/barbershop_typebot_1782391320979.png",
+        "assets/linkedin_carousel_1782391332557.png",
+        "assets/omnichannel_sales_1782391343159.png",
+        "assets/personal_assistant_1782391352348.png"
     ]
     
     image_url = images_array[proj_idx] if proj_idx < len(images_array) else "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"

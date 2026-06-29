@@ -89,7 +89,7 @@ const projects = [
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. The business problem (The Challenge)</h3>
 <div class="text-gray-300 leading-relaxed text-sm md:text-base">Systematic maintenance of social networks (LinkedIn, Facebook) for experts or B2B companies requires a huge amount of time: searching for topics, collecting facts, writing texts for different formats and selecting illustrations. Hiring an SMM department is expensive, and writing yourself is not enough time. The task was to create a system that would work for months on full autopilot, generating not typical "artificial" text, but deep, factual content with the right logic to warm up the audience.</div>
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">I designed and implemented an autonomous "content factory" at<strong class="text-white">n8n</strong>that independently conducts research, writes posts and publishes them according to a complex content plan.<br>-<strong class="text-white">Data Management (Baserow):</strong>As an architectural solution, I chose Baserow over Airtable to get around the hard limits of free API requests. The database stores global topics for months ahead and a matrix of AI settings (Tone of Voice, Temperature, character limits, hashtags).<br>-<strong class="text-white">Deep Research (Firecrawl):</strong>Before writing a post, the script takes a given topic and through Firecrawl scans the Internet to collect relevant data. Thus, AI (Gemini) relies on fresh facts and not on its own hallucinations.<br>-<strong class="text-white">Logic of warm-up by days of the week:</strong>The script distinguishes the context of the publication. On Monday, a post is generated about<strong class="text-white">"pains"</strong>of the business (provocative tone), on Wednesday -<strong class="text-white">analytics and solutions</strong>(historical/intelligent tone), on Friday -<strong class="text-white">opportunities</strong>(inspirational tone). The texts are also dynamically adapted to the specifics of LinkedIn and Facebook.<br>-<strong class="text-white">Visual (Vertex AI):</strong>For each post, the system automatically generates a unique image through Vertex AI, automatically downloads it and attaches it to the post.</div>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I designed and implemented an autonomous "content factory" at<strong class="text-white">n8n</strong>that independently conducts research, writes posts and publishes them according to a complex content plan.<br>-<strong class="text-white">Data Management (Baserow):</strong>As an architectural solution, I chose Baserow over Airtable to get around the hard limits of free API requests. The database stores global topics for months ahead and a matrix of AI settings (Tone of Voice, Temperature, character limits, hashtags).<br>-<strong class="text-white">Deep Research (Firecrawl):</strong>Before writing a post, the script takes a given topic and through Firecrawl scans the Internet to collect relevant data. Thus, AI (Gemini) relies on fresh facts, and not on its own hallucinations.<br>-<strong class="text-white">Logic of warm-up by days of the week:</strong>The script distinguishes the context of the publication. On Monday, a post is generated about<strong class="text-white">"pains"</strong>of the business (provocative tone), on Wednesday -<strong class="text-white">analytics and solutions</strong>(historical/intelligent tone), on Friday -<strong class="text-white">opportunities</strong>(inspirational tone). The texts are also dynamically adapted to the specifics of LinkedIn and Facebook.<br>-<strong class="text-white">Visual (Vertex AI):</strong>For each post, the system automatically generates a unique image through Vertex AI, automatically downloads it and attaches it to the post.</div>
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
 <div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">Orchestration:</strong>n8n (complex routing, Switch/Filter nodes, HTTP Requests)<br>-<strong class="text-white">Database:</strong>Baserow (Relational Database)<br>-<strong class="text-white">AI Core:</strong>Gemini Flash (Text), Vertex AI Imagen (Images)<br>-<strong class="text-white">Data Collection:</strong>Firecrawl (Web Scraping & Search)<br>-<strong class="text-white">Integrations:</strong>LinkedIn API, Facebook Graph API, Telegram API (for notifications about successful posting)</div>
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Impact)</h3>
@@ -108,43 +108,6 @@ const projects = [
     },
     {
         id: "proj_1",
-        image: "assets/content_v2.png",
-        title: {
-            en: `Autonomous AI Content Ecosystem`,
-            ua: `Autonomous AI Content Ecosystem`
-        },
-        tags: ['n8n', 'Baserow', 'Gemini', 'Vertex AI', 'LinkedIn'],
-        summary: {
-            en: `Systematic maintenance of social networks (LinkedIn, Facebook) for experts or B2B companies requires a huge amount of time: searching for topics, collecting facts, writing texts fo...`,
-            ua: `Системне ведення соціальних мереж (LinkedIn, Facebook) для експертів чи B2B-компаній вимагає колосальних витрат часу: пошук тем, збір фактажу, написання текстів під різні формати т...`
-        },
-        content: {
-            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. The business problem (The Challenge)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">Systematic maintenance of social networks (LinkedIn, Facebook) for experts or B2B companies requires a huge amount of time: searching for topics, collecting facts, writing texts for different formats and selecting illustrations. Hiring an SMM department is expensive, and writing yourself is not enough time. The task was to create a system that would work for months on full autopilot, generating not typical "artificial" text, but deep, factual content with the right logic to warm up the audience.</div>
-<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Evolution of architecture (Architecture Pivot)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">This project went through two stages of development, which made it possible to find the perfect balance between control and cost:<br>-<strong class="text-white">V1 (Human-in-the-loop):</strong>Initially, the system was based on the connection of<strong class="text-white">Airtable + Softr</strong>. The script generated content, and through a user-friendly interface in Softr (Dashboard), a person could manually check the texts by pressing the "Send for publication" or "Regenerate" buttons. However, the system quickly reached the limit of 1000 API requests of the free Airtable tariff.<br>-<strong class="text-white">V2 (Fully Autonomous & Cost-Optimized):</strong>Instead of switching to expensive paid plans, I completely changed the architecture. Airtable has been replaced by<strong class="text-white">Baserow</strong>(no limits). The generation process was so polished with prompts that the need for manual verification through Softr disappeared — the system became 100% autonomous.</div>
-<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. The Solution and Pipeline (The Solution)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">Today it is a completely autonomous "content factory" in<strong class="text-white">n8n</strong>:<br>-<strong class="text-white">Data management (Baserow):</strong>Global topics for months ahead and a matrix of AI settings (Tone of Voice, Temperature, character limits, hashtags) are stored in the database.<br>-<strong class="text-white">Deep Research (Firecrawl):</strong>Before writing a post, the script takes a given topic and through Firecrawl scans the Internet to collect relevant data. Thus, AI (Gemini) relies on fresh facts and not on its own hallucinations.<br>-<strong class="text-white">Logic of warm-up by days of the week:</strong>The script distinguishes the context of the publication. On Monday, a post is generated about<strong class="text-white">"pains"</strong>of the business (provocative tone), on Wednesday -<strong class="text-white">analytics and solutions</strong>(historical/intelligent tone), on Friday -<strong class="text-white">opportunities</strong>(inspirational tone). The texts are also dynamically adapted to the specifics of LinkedIn and Facebook.<br>-<strong class="text-white">Visual (Vertex AI) and Storage (Google Drive):</strong>For each post, a unique image is automatically generated by Vertex AI, which is stored on Google Drive before the final publication.</div>
-<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Tech Stack</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">Orchestration:</strong>n8n (complex routing, Switch/Filter nodes, parallel branches)<br>-<strong class="text-white">Database and Interfaces:</strong>Baserow (V2), Airtable + Softr (V1)<br>-<strong class="text-white">AI Core:</strong>Gemini Flash (Text), Vertex AI Imagen (Images)<br>-<strong class="text-white">Data Collection:</strong>Firecrawl (Web Scraping & Search)<br>-<strong class="text-white">Integrations:</strong>Google Drive API, LinkedIn API, Facebook Graph API, Telegram API (for notifications about successful posting)</div>
-<h3 class="text-xl font-bold mt-8 mb-3 text-accent">5. Business result (Business Impact)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">Absolute autonomy:</strong>It is enough to spend 10 minutes once every few months to enter 5-7 topics in the table. Next, the system automatically maintains 2 social networks 3 days a week without any intervention.<br>-<strong class="text-white">Total savings:</strong>Rejection of Airtable/Softr in favor of Baserow, as well as the use of Google Cloud (Vertex AI) grant credits allowed to reduce the cost of producing unique content to almost zero.<br>-<strong class="text-white">Scalability:</strong>The architecture easily allows you to add new social networks (like Instagram or X) or new post days just by adding a new branch in n8n.<br><br><br>---</div>
-`,
-            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Проблема бізнесу (The Challenge)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">Системне ведення соціальних мереж (LinkedIn, Facebook) для експертів чи B2B-компаній вимагає колосальних витрат часу: пошук тем, збір фактажу, написання текстів під різні формати та підбір ілюстрацій. Наймати SMM-відділ — дорого, а писати самому — не вистачає часу. Завдання полягало у створенні системи, яка б місяцями працювала на повному автопілоті, генеруючи не типовий "штучний" текст, а глибокий, фактологічний контент із правильною логікою прогріву аудиторії.</div>
-<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Еволюція архітектури (Architecture Pivot)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">Цей проєкт пройшов дві стадії розвитку, що дозволило знайти ідеальний баланс між контролем та вартістю:<br><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">V1 (Human-in-the-loop):</strong> Спочатку система базувалася на зв'язці <strong class="text-white">Airtable + Softr</strong>. Сценарій генерував контент, і через зручний інтерфейс у Softr (Dashboard) людина могла вручну перевіряти тексти, натискаючи кнопки "Відправити на публікацію" або "Перегенерувати". Проте система швидко вперлася в ліміт 1000 API-запитів безкоштовного тарифу Airtable.</li><br><li><strong class="text-white">V2 (Fully Autonomous & Cost-Optimized):</strong> Замість переходу на дорогі платні тарифи, я повністю змінив архітектуру. Airtable був замінений на <strong class="text-white">Baserow</strong> (без лімітів). Процес генерації був настільки відшліфований промптами, що необхідність у ручній перевірці через Softr відпала — система стала на 100% автономною.</li></ul></div>
-<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Рішення та Пайплайн (The Solution)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">Сьогодні це повністю автономний "завод контенту" в <strong class="text-white">n8n</strong>:<br><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Керування даними (Baserow):</strong> У базі зберігаються глобальні теми на місяці вперед та матриця налаштувань ШІ (Tone of Voice, Temperature, ліміти знаків, хештеги).</li><br><li><strong class="text-white">Deep Research (Firecrawl):</strong> Перед тим як писати пост, сценарій бере задану тему і через Firecrawl сканує інтернет для збору актуальних даних. Таким чином, ШІ (Gemini) спирається на свіжі факти, а не на власні галюцинації.</li><br><li><strong class="text-white">Логіка прогріву по днях тижня:</strong> Сценарій розрізняє контекст публікації. У понеділок генерується пост про <strong class="text-white">"болі"</strong> бізнесу (провокаційний тон), у середу — <strong class="text-white">аналітика та вирішення</strong> (історичний/розумний тон), у п'ятницю — <strong class="text-white">можливості</strong> (надихаючий тон). Тексти також динамічно адаптуються під специфіку LinkedIn та Facebook.</li><br><li><strong class="text-white">Візуал (Vertex AI) та Сховище (Google Drive):</strong> Для кожного посту автоматично генерується унікальне зображення через Vertex AI, яке зберігається на Google Drive перед фінальною публікацією.</li></ul></div>
-<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Технічний стек (Tech Stack)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Оркестрація:</strong> n8n (складна маршрутизація, Switch/Filter ноди, паралельні гілки)</li><br><li><strong class="text-white">База даних та Інтерфейси:</strong> Baserow (V2), Airtable + Softr (V1)</li><br><li><strong class="text-white">ШІ-ядро:</strong> Gemini Flash (Text), Vertex AI Imagen (Images)</li><br><li><strong class="text-white">Збір даних:</strong> Firecrawl (Web Scraping & Search)</li><br><li><strong class="text-white">Інтеграції:</strong> Google Drive API, LinkedIn API, Facebook Graph API, Telegram API (для сповіщень про успішний постинг)</li></ul></div>
-<h3 class="text-xl font-bold mt-8 mb-3 text-accent">5. Бізнес-результат (Business Impact)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Абсолютна автономність:</strong> Достатньо раз на кілька місяців витратити 10 хвилин, щоб вписати 5-7 тем у таблицю. Далі система автоматично веде 2 соцмережі 3 дні на тиждень без жодного втручання.</li><br><li><strong class="text-white">Тотальна економія:</strong> Відмова від Airtable/Softr на користь Baserow, а також використання грантових кредитів Google Cloud (Vertex AI) дозволили звести вартість виробництва унікального контенту практично до нуля.</li><br><li><strong class="text-white">Масштабованість:</strong> Архітектура легко дозволяє додати нові соціальні мережі (наприклад, Instagram чи X) або нові дні публікації просто додавши нову гілку в n8n.</li><br></ul><br><br>---</div>
-`
-        }
-    },
-    {
-        id: "proj_2",
         image: "assets/ecommerce_banner.png",
         title: {
             en: `E-Commerce Creative Factory (Telegram to Banner)`,
@@ -177,7 +140,7 @@ const projects = [
         }
     },
     {
-        id: "proj_3",
+        id: "proj_2",
         image: "assets/event_crm.png",
         title: {
             en: `Event CRM & Attendee Communication Pipeline`,
@@ -210,7 +173,7 @@ const projects = [
         }
     },
     {
-        id: "proj_4",
+        id: "proj_3",
         image: "assets/influencer.png",
         title: {
             en: `Influencer Data Pipeline: Make.com to n8n Migration`,
@@ -243,7 +206,7 @@ const projects = [
         }
     },
     {
-        id: "proj_5",
+        id: "proj_4",
         image: "assets/reels.png",
         title: {
             en: `Social Media Automation: Reels Analyzer & Auto-Poster`,
@@ -276,7 +239,7 @@ const projects = [
         }
     },
     {
-        id: "proj_6",
+        id: "proj_5",
         image: "assets/pdf_rag.png",
         title: {
             en: `Multimodal AI-Agent (Complex PDF RAG)`,
@@ -309,7 +272,7 @@ const projects = [
         }
     },
     {
-        id: "proj_7",
+        id: "proj_6",
         image: "assets/n8n_arch.png",
         title: {
             en: `Secure Self-Hosted n8n Architecture`,
@@ -342,7 +305,7 @@ const projects = [
         }
     },
     {
-        id: "proj_8",
+        id: "proj_7",
         image: "assets/telegram.png",
         title: {
             en: `Telegram "Radar" Lead Generation System`,
@@ -375,7 +338,7 @@ const projects = [
         }
     },
     {
-        id: "proj_9",
+        id: "proj_8",
         image: "assets/travel.png",
         title: {
             en: `Autonomous Travel News Autoblogger`,
@@ -392,7 +355,7 @@ const projects = [
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
 <div class="text-gray-300 leading-relaxed text-sm md:text-base">I developed a fully autonomous "AI Newsroom" based on<strong class="text-white">n8n</strong>, which works as a full-fledged newsroom without any human intervention.<br><br>-<strong class="text-white">Dynamic schedule (JS Routing):</strong>Instead of static prompts, I wrote a JavaScript module that contains a content matrix per week. Depending on the day (via \`new Date().getDay()\`), the script issues specific search requests to the system. For example: on Monday <ul class="list-disc pl-5 my-2 space-y-1"><li>travel hacks and technologies (eSIM); on Wednesday — budget routes and discounts; on Friday - world festivals and food. Also, negative words (for example, \`-war-russia') for brand safety are immediately written in the code.</li><br></ul>-<strong class="text-white">Web Scraping & Research:</strong>After receiving requests for the current day, n8n turns to<strong class="text-white">Firecrawl</strong>, which crawls the web and pulls the latest travel industry news and articles for the current week.<br>-<strong class="text-white">AI-Generation (Vertex AI):</strong>The entire array of "raw" news is sent to<strong class="text-white">Google Vertex AI</strong>. The model analyzes the fact and generates from it a single, well-written post for Facebook, following the style of the travel agency. Additionally, AI generates a thematic image (for example, a girl with a laptop near the sea for a post about Digital Nomad).<br>-<strong class="text-white">Distribution:</strong>The finished text and images are automatically published on the Facebook page.</div>
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">Orchestration:</strong>n8n (Cron Triggers, JS Code Nodes for complex schedule logic)<br>-<strong class="text-white">Search & Data Extraction:</strong>Firecrawl API (search for current news in real time)<br>-<strong class="text-white">AI models:</strong>Google Vertex AI (text generation based on real facts), AI Image Generation<br>-<strong class="text-white">Integrations:</strong>Facebook Pages API, Telegram API (for logging and verification)</div>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">Orchestration:</strong>n8n (Cron Triggers, JS Code Nodes for complex scheduling logic)<br>-<strong class="text-white">Search & Data Extraction:</strong>Firecrawl API (search for current news in real time)<br>-<strong class="text-white">AI models:</strong>Google Vertex AI (text generation based on real facts), AI Image Generation<br>-<strong class="text-white">Integrations:</strong>Facebook Pages API, Telegram API (for logging and verification)</div>
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Impact)</h3>
 <div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">Zero-Touch Automation:</strong>The question "what to fast today" is closed forever. The agency page lives a life of its own, constantly being filled with fresh, relevant content.<br>-<strong class="text-white">Budget savings (Cost Savings):</strong>The agency completely saved the budget on the basic services of SMM and copywriter.<br>-<strong class="text-white">Factual accuracy (Grounded AI):</strong>Since the text generation is based on Firecrawl search results, the bot does not create "hallucinations", but publishes real news, trends and prices collected from the Internet.<br><br><br>---</div>
 `,
@@ -408,7 +371,7 @@ const projects = [
         }
     },
     {
-        id: "proj_10",
+        id: "proj_9",
         image: "assets/voice_banner.png",
         title: {
             en: `Ultra-Fast AI Voice Translator`,
@@ -421,7 +384,7 @@ const projects = [
         },
         content: {
             en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. The business problem (The Challenge)</h3>
-<div class="text-gray-300 leading-relaxed text-sm md:text-base">A reliable simultaneous translation tool was needed for conducting negotiations and passing technical interviews with English-speaking companies. The initial architecture was assembled in n8n (Webhook -> STT -> LLM -> TTS). However, it had two critical flaws:<br>1.<strong class="text-white">Latency:</strong>Running nodes and routing data through n8n added extra seconds to processing. In a live dialogue, even a 1-2 second pause causes the interlocutor to lose focus.<br>2.<strong class="text-white">API Limitations:</strong>Quality voiceover models (eg OpenAI TTS) are paid. At the same time, NVIDIA offers phenomenal models (Riva) for free, but they do not support a standard REST API for easy integration into n8n, requiring operation via the gRPC protocol.</div>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">A reliable simultaneous translation tool was needed for conducting negotiations and passing technical interviews with English-speaking companies. The initial architecture was assembled in n8n (Webhook -> STT -> LLM -> TTS). However, it had two critical shortcomings:<br>1.<strong class="text-white">Latency:</strong>Running nodes and routing data through n8n added extra seconds to processing. In a live dialogue, even a 1-2 second pause causes the interlocutor to lose focus.<br>2.<strong class="text-white">API Limitations:</strong>Quality voiceover models (eg OpenAI TTS) are paid. At the same time, NVIDIA offers phenomenal models (Riva) for free, but they do not support a standard REST API for easy integration into n8n, requiring operation via the gRPC protocol.</div>
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. The Solution and Architecture (The Solution)</h3>
 <div class="text-gray-300 leading-relaxed text-sm md:text-base">In order to achieve maximum speed (Real-time), I abandoned n8n and wrote (via the AI ​​Vibecoding methodology) a custom multi-threaded application in pure Python. <br><br>The system works in two parallel streams:<br>-<strong class="text-white">My Voice (UA -> EN):</strong>Python script captures sound from the microphone using mathematical voice detection (Custom VAD via RMS Threshold). The audio is instantly transcribed via<strong class="text-white">Groq (Whisper v3)</strong>, translated by the<strong class="text-white">Llama 3.1 70B</strong>model, and voiced to my interlocutor via the high-speed<strong class="text-white">gRPC channels of NVIDIA Riva</strong>.<br>-<strong class="text-white">Voice of interlocutor (EN -> UA):</strong>Instead of spending precious milliseconds to generate a Ukrainian voice, the script "listens" to the system speakers (of the interlocutor), uses<strong class="text-white">Streaming STT</strong>from NVIDIA for on-the-fly recognition, translates the text and instantly displays it on my screen in the form of subtitles via a local web server on<strong class="text-white">Flask + SocketIO</strong>.</div>
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
@@ -441,7 +404,7 @@ const projects = [
         }
     },
     {
-        id: "proj_11",
+        id: "proj_10",
         image: "assets/ai_content_factory_1782391258156.png",
         title: {
             en: `AI Content Factory & E-commerce Product Manager`,
@@ -470,6 +433,39 @@ const projects = [
 <div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">n8n</strong> (Core Orchestrator - понад 10 складних воркфлоу)</li><br><li><strong class="text-white">Telegram API</strong> (Custom UI з Role-Based Access Control)</li><br><li><strong class="text-white">SalesDrive CRM</strong> (Джерело даних про продажі)</li><br><li><strong class="text-white">PostgreSQL</strong> (Data Warehousing, Batch Upserts, Аналітика)</li><br><li><strong class="text-white">OpenAI & Image Gen API</strong> (Генерація текстів, картинок, розпізнавання скріншотів)</li></ul></div>
 <h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
 <div class="text-gray-300 leading-relaxed text-sm md:text-base">Система повністю забрала на себе найнуднішу роботу в компанії (ручне заповнення карток товарів), що зекономило сотні годин персоналу. Маркетинг став керуватися даними (Data-Driven) — тепер рекламуються саме ті товари, які реально продаються (згідно з CRM). Весь процес створення високоякісних креативів скоротився з годин до кількох кліків у месенджері, під надійним фінансовим контролем власника.</div>
+`
+        }
+    },
+    {
+        id: "proj_11",
+        image: "assets/google_ads_dashboard.png",
+        title: {
+            en: `Automated Google Ads Reporting System`,
+            ua: `Automated Google Ads Reporting System`
+        },
+        tags: ['n8n', 'Telegram', 'Google Sheets'],
+        summary: {
+            en: `Marketing agencies spend hours every day manually collecting statistics. The purpose of this project is to automate data export from Google Ads. This application has read-only acce...`,
+            ua: `Маркетингові агентства щодня витрачають години на ручний збір статистики. Метою цього проєкту є автоматизація експорту даних з Google Ads. Цей додаток має доступ виключно для читан...`
+        },
+        content: {
+            en: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Business problem (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Marketing agencies spend hours every day manually collecting statistics. The purpose of this project is to automate data export from Google Ads. This application has read-only access. It does not create or modify ad campaigns or budgets. This is purely a reporting tool.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Architectural logic (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">I developed a standalone analytics pipeline that works through the official Google Ads API:<br>-<strong class="text-white">Integration via n8n:</strong>Connection is made using Developer Token and OAuth 2.0 (read-only access).<br>-<strong class="text-white">Data Extraction:</strong>Using GAQL, the script extracts metrics (Impressions, Clicks, Cost) for the previous day.<br>-<strong class="text-white">Telegram notification:</strong>The generated report is sent to the Telegram group.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Tech Stack</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">-<strong class="text-white">n8n</strong>(Orchestration & Workflow Automation)<br>-<strong class="text-white">Google Ads API</strong>(Read-only data extraction using GAQL)<br>-<strong class="text-white">OAuth 2.0</strong>(Secure authentication)<br>-<strong class="text-white">Telegram API</strong>(Automated reporting)<br>-<strong class="text-white">Google Sheets</strong>(Logging)</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Business result (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Full automation of daily reporting. Media bayers were released until 2 o'clock every morning. The application guarantees security through strict read-only access.</div>
+`,
+            ua: `<h3 class="text-xl font-bold mt-8 mb-3 text-accent">1. Бізнес-проблема (The Challenge)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Маркетингові агентства щодня витрачають години на ручний збір статистики. Метою цього проєкту є автоматизація експорту даних з Google Ads. Цей додаток має доступ виключно для читання (read-only). Він не створює та не змінює рекламні кампанії або бюджети. Це виключно інструмент звітності.</div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">2. Архітектурна логіка (The Solution)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Я розробив автономний конвеєр аналітики, який працює через офіційний Google Ads API:<br><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">Інтеграція через n8n:</strong> Підключення відбувається за допомогою Developer Token та OAuth 2.0 (read-only access).</li><br><li><strong class="text-white">Витяг даних (Data Extraction):</strong> За допомогою GAQL скрипт витягує метрики (Impressions, Clicks, Cost) за попередній день.</li><br><li><strong class="text-white">Telegram сповіщення:</strong> Згенерований звіт надсилається у Telegram-групу.</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">3. Технічний стек (Tech Stack)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base"><ul class="list-disc pl-5 my-2 space-y-1"><li><strong class="text-white">n8n</strong> (Orchestration & Workflow Automation)</li><br><li><strong class="text-white">Google Ads API</strong> (Read-only data extraction using GAQL)</li><br><li><strong class="text-white">OAuth 2.0</strong> (Secure authentication)</li><br><li><strong class="text-white">Telegram API</strong> (Automated reporting)</li><br><li><strong class="text-white">Google Sheets</strong> (Logging)</li></ul></div>
+<h3 class="text-xl font-bold mt-8 mb-3 text-accent">4. Бізнес-результат (Business Value)</h3>
+<div class="text-gray-300 leading-relaxed text-sm md:text-base">Повна автоматизація щоденної звітності. Медіа-баєри звільнили до 2 годин щоранку. Додаток гарантує безпеку через суворий read-only доступ.</div>
 `
         }
     },
