@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service & Public Offer | Alexei techhelp</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0B0E14;
+            color: #e2e8f0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .glass {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .lang-btn.active {
+            background-color: #2563EB;
+            color: #ffffff;
+            border-color: #3B82F6;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen py-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+
+    <div class="max-w-4xl w-full">
+        <!-- Top Navigation -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+            <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass hover:bg-slate-800 text-gray-300 hover:text-white transition">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span data-en="Back to Portfolio" data-ua="Назад до портфоліо">Back to Portfolio</span>
+            </a>
+
+            <!-- Language Switcher -->
+            <div class="flex items-center p-1 rounded-xl glass border border-slate-700">
+                <button onclick="setDocLang('en')" id="btn-en" class="lang-btn active px-4 py-1.5 rounded-lg text-sm font-semibold transition flex items-center gap-2">
+                    <span>🇬🇧 English (International)</span>
+                </button>
+                <button onclick="setDocLang('ua')" id="btn-ua" class="lang-btn px-4 py-1.5 rounded-lg text-sm font-semibold text-gray-400 hover:text-white transition flex items-center gap-2">
+                    <span>🇺🇦 Українська (Оферта)</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Document Container -->
+        <div class="glass p-6 sm:p-10 md:p-14 rounded-3xl shadow-2xl relative overflow-hidden">
+            
+            <!-- ENGLISH VERSION -->
+            <div id="content-en" class="space-y-8 text-gray-300 leading-relaxed">
+                <header class="border-b border-gray-800 pb-6">
+                    <span class="text-xs uppercase tracking-widest font-bold text-blue-400">Public Offer Agreement</span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Terms of Service & Public Offer</h1>
+                    <p class="text-sm text-gray-400 mt-2">Software Development, Workflow Automation & IT Consulting Services</p>
+                    <p class="text-xs text-gray-500 mt-1">Effective Date: June 1, 2026 | Last updated: <span class="current-date"></span></p>
+                </header>
+
+                <div class="bg-blue-950/40 border border-blue-800/40 rounded-2xl p-4 text-sm text-blue-200">
+                    <i class="fa-solid fa-circle-info mr-2 text-blue-400"></i>
+                    <strong>Notice:</strong> This Public Offer constitutes a legally binding agreement between the Contractor and the Customer. Payment for services via an issued payment link constitutes unconditional acceptance of all terms herein.
+                </div>
+
+                <!-- 1. General Provisions & Parties -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">1.</span> Parties & General Provisions
+                    </h2>
+                    <p class="mb-3">
+                        <strong>1.1. Contractor:</strong> Individual Entrepreneur <strong>Oleksii Yakubets (FOP Yakubets O. / Alexei Iacubet)</strong>, registered and operating under the laws of Ukraine, Tax ID / RNOKPP: <strong>[YOUR_TAX_ID / РНОКПП]</strong> (hereinafter referred to as the <em>"Contractor"</em>).
+                    </p>
+                    <p class="mb-3">
+                        <strong>1.2. Customer:</strong> Any legally capable natural person, legal entity, or authorized representative who accepts the terms of this Offer and pays for the Contractor's services (hereinafter referred to as the <em>"Customer"</em>).
+                    </p>
+                    <p>
+                        <strong>1.3. Legal Basis:</strong> This agreement is a public contract under Articles 633, 641, and 642 of the Civil Code of Ukraine and standard international commercial law practices for digital cross-border services.
+                    </p>
+                </section>
+
+                <!-- 2. Subject Matter of Services -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">2.</span> Subject Matter of the Services
+                    </h2>
+                    <p class="mb-3">
+                        <strong>2.1.</strong> The Contractor undertakes to provide IT, software development, and automation services, and the Customer undertakes to accept and pay for such services on the terms set forth herein.
+                    </p>
+                    <p class="mb-2"><strong>2.2. The scope of services includes, but is not limited to (under NACE/KVED codes 62.01, 62.02, 62.09, 63.11, 63.99):</strong></p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-300">
+                        <li><strong>Workflow Automation:</strong> Design, development, configuration, testing, and deployment of automated workflows and pipelines (including, but not limited to, via n8n, Make, Zapier, custom scripts in Python, JavaScript / Node.js, or any other software platforms and automation engines);</li>
+                        <li><strong>API & System Integrations:</strong> Third-party service integrations via REST/GraphQL APIs, webhooks setup, data transformation, and synchronization of databases and business management tools (including, but not limited to, PostgreSQL, Supabase, Airtable, Notion, CRM systems, cloud platforms, or on-premise solutions);</li>
+                        <li><strong>AI & LLM Solutions:</strong> Development, prompt engineering, fine-tuning, configuration, and integration of AI agents, autonomous assistants, chatbots, Large Language Models (LLMs), and Retrieval-Augmented Generation (RAG) architectures with Customer communication channels and internal tools;</li>
+                        <li><strong>Technical Consulting & Support:</strong> IT consulting, digital system architecture audits, business process optimization, troubleshooting, technical maintenance, and setup of any accompanying software, digital tools, or infrastructure as agreed with the Customer.</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-400">
+                        <strong>2.3. Project Specifics:</strong> The specific list of tasks, target platforms, custom features, and delivery scope shall be agreed upon by the Parties through electronic correspondence (email, instant messaging), project specifications, or invoice descriptions, and shall in all cases be fully governed by this Public Offer.
+                    </p>
+                    <p class="mt-2 text-sm text-gray-400">
+                        <strong>2.4. Third-Party Dependencies:</strong> The Contractor is not liable for disruptions, rate limits, access revocations, pricing changes, or policy updates imposed by third-party service providers, cloud hosts, API platforms, or AI vendors (such as OpenAI, Anthropic, Google, Telegram, Meta, payment gateways, or CRM vendors) integrated into the Customer's workflows.
+                    </p>
+                </section>
+
+                <!-- 3. Acceptance & Contract Formation -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">3.</span> Order of Acceptance & Contract Conclusion
+                    </h2>
+                    <p class="mb-3">
+                        <strong>3.1. Instant Acceptance:</strong> This Offer is deemed fully and unconditionally accepted without reservations at the moment the Customer makes a successful payment via a personalized payment link (Pay-by-Link), invoice, or online acquiring gateway provided by the Contractor.
+                    </p>
+                    <p>
+                        <strong>3.2.</strong> Payment signifies that the Customer has reviewed, understood, and agreed to the project scope, timelines, pricing, and all terms defined in this Public Offer.
+                    </p>
+                </section>
+
+                <!-- 4. Service Acceptance & Deemed Completion -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">4.</span> Service Acceptance & Proof of Delivery (No Paper Act Required)
+                    </h2>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-700 space-y-3">
+                        <p class="font-medium text-white">
+                            <strong>4.1. Electronic Primary Document:</strong> Payment for the services by the Customer via the payment link or bank transfer constitutes full, final, and indisputable confirmation of the proper and complete provision of services by the Contractor, their acceptance by the Customer, and the absence of any claims regarding quality, scope, or delivery time.
+                        </p>
+                        <p class="text-sm text-gray-400">
+                            <strong>4.2.</strong> The paid invoice, electronic receipt, or payment gateway transaction log serves as a sufficient primary document replacing a bilateral signed physical Service Acceptance Act (Certificate of Completion), pursuant to Law of Ukraine No. 4496-VIII on simplifying export of services and international electronic commerce standards.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 5. Pricing, Payment & Taxes -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">5.</span> Pricing, Payment Terms & Taxes
+                    </h2>
+                    <p class="mb-3">
+                        <strong>5.1. Payment Methods:</strong> Payment is performed online via non-cash electronic funds transfer through authorized secure international payment processors (e.g., Stripe, LiqPay, Fondy, WayForPay, or direct SEPA/SWIFT bank transfer).
+                    </p>
+                    <p class="mb-3">
+                        <strong>5.2. Without VAT:</strong> Prices do not include Value Added Tax (VAT). The Contractor operates under the simplified taxation system (Single Tax payer) and is not a VAT payer under Ukrainian tax legislation.
+                    </p>
+                    <p>
+                        <strong>5.3. Banking & FX Fees:</strong> Any correspondent banking fees, acquiring processing commissions, or currency conversion expenses shall be governed according to the selected payment gateway and the Customer's issuing bank terms.
+                    </p>
+                </section>
+
+                <!-- 6. Refund & Cancellation Policy -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">6.</span> Refund & Cancellation Policy
+                    </h2>
+                    <p class="mb-3">
+                        <strong>6.1. Custom Digital Services:</strong> Due to the customized, intangible, and intellectual nature of software development and workflow automation services, payments made are <strong>non-refundable</strong> once service provision or system configuration has commenced or has been delivered.
+                    </p>
+                    <p>
+                        <strong>6.2. Exceptional Cases:</strong> Any partial refund or service scope modification is possible solely upon mutual prior written agreement between both Parties before work execution.
+                    </p>
+                </section>
+
+                <!-- 7. Intellectual Property & Confidentiality -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">7.</span> Intellectual Property & Confidentiality
+                    </h2>
+                    <p class="mb-3">
+                        <strong>7.1.</strong> Upon full payment, the Customer receives non-exclusive rights to use the delivered custom workflows, scripts, and configurations for their business operations.
+                    </p>
+                    <p>
+                        <strong>7.2.</strong> Both Parties agree to maintain confidentiality regarding any business data, API keys, credentials, and customer personal data processed during the engagement.
+                    </p>
+                </section>
+
+                <!-- 8. Contractor Details & Contacts -->
+                <section class="border-t border-gray-800 pt-6">
+                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <span class="text-blue-400">8.</span> Legal Entity Details & Contact Information
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                            <h3 class="font-bold text-white mb-2">Contractor:</h3>
+                            <p><strong>Entity:</strong> FOP Yakubets Oleksii (Alexei Iacubet)</p>
+                            <p><strong>Country:</strong> Ukraine</p>
+                            <p><strong>Tax ID / RNOKPP:</strong> [YOUR_TAX_ID / РНОКПП]</p>
+                            <p><strong>NACE Codes:</strong> 62.01, 62.02, 62.09, 63.11, 63.99</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                            <h3 class="font-bold text-white mb-2">Direct Contacts:</h3>
+                            <p><strong>Email:</strong> <a href="mailto:alexei.techhelp@gmail.com" class="text-blue-400 hover:underline">alexei.techhelp@gmail.com</a></p>
+                            <p><strong>Telegram:</strong> <a href="https://t.me/alirtrans" target="_blank" class="text-blue-400 hover:underline">@alirtrans</a></p>
+                            <p><strong>WhatsApp / Phone:</strong> <a href="tel:+380501006060" class="text-blue-400 hover:underline">+38050 100 60 60</a></p>
+                            <p><strong>Website:</strong> <a href="index.html" class="text-blue-400 hover:underline">alexei-techhelp.github.io</a></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- UKRAINIAN VERSION -->
+            <div id="content-ua" class="space-y-8 text-gray-300 leading-relaxed hidden">
+                <header class="border-b border-gray-800 pb-6">
+                    <span class="text-xs uppercase tracking-widest font-bold text-blue-400">Договір публічної оферти</span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Публічна оферта (Terms of Service)</h1>
+                    <p class="text-sm text-gray-400 mt-2">Про надання послуг з розробки програмного забезпечення, автоматизації процесів та IT-консалтингу</p>
+                    <p class="text-xs text-gray-500 mt-1">Дата набрання чинності: 1 червня 2026 р. | Останнє оновлення: <span class="current-date"></span></p>
+                </header>
+
+                <div class="bg-blue-950/40 border border-blue-800/40 rounded-2xl p-4 text-sm text-blue-200">
+                    <i class="fa-solid fa-circle-info mr-2 text-blue-400"></i>
+                    <strong>Важливо:</strong> Цей договір є офіційною публічною пропозицією (офертою). Оплата послуг за наданим платіжним посиланням або виставленим рахунком є повним і беззастережним акцептом усіх умов цього договору.
+                </div>
+
+                <!-- 1. Сторони та загальні положення -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">1.</span> Сторони та загальні положення
+                    </h2>
+                    <p class="mb-3">
+                        <strong>1.1. Виконавець:</strong> Фізична особа-підприємець <strong>Якубець Олексій (ФОП Якубець О. / FOP Yakubets Oleksii)</strong>, який діє на підставі виписки з ЄДР відповідно до законодавства України, РНОКПП: <strong>[YOUR_TAX_ID / РНОКПП]</strong> (надалі — <em>«Виконавець»</em>).
+                    </p>
+                    <p class="mb-3">
+                        <strong>1.2. Замовник:</strong> Будь-яка дієздатна фізична особа, юридична особа або фізична особа-підприємець (включаючи нерезидентів України), яка прийняла умови цієї Оферти та здійснила оплату послуг (надалі — <em>«Замовник»</em>).
+                    </p>
+                    <p>
+                        <strong>1.3. Юридична основа:</strong> Договір укладається у відповідності до ст. 633, 641, 642 Цивільного кодексу України та регулює дистанційне надання цифрових послуг через мережу Інтернет.
+                    </p>
+                </section>
+
+                <!-- 2. Предмет договору -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">2.</span> Предмет договору
+                    </h2>
+                    <p class="mb-3">
+                        <strong>2.1.</strong> Виконавець бере на себе зобов'язання надати Замовнику послуги у сфері інформаційних технологій, розробки та автоматизації, а Замовник зобов'язується прийняти й оплатити надані послуги на умовах цього Договору.
+                    </p>
+                    <p class="mb-2"><strong>2.2. До складу послуг належать, зокрема, але не обмежуючись (відповідно до КВЕД 62.01, 62.02, 62.09, 63.11, 63.99):</strong></p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-300">
+                        <li><strong>Автоматизація робочих процесів:</strong> Проєктування, розробка, налаштування, тестування та впровадження сценаріїв автоматизації (зокрема на базі платформ n8n, Make, Zapier, кастомних скриптів на Python, JavaScript / Node.js або будь-якого іншого програмного забезпечення та цифрових платформ);</li>
+                        <li><strong>API та системні інтеграції:</strong> Інтеграція сторонніх сервісів і платформ через REST/GraphQL API, налаштування вебхуків, обробка та трансформація даних, синхронізація баз даних і систем керування (включаючи, але не обмежуючись, PostgreSQL, Supabase, Airtable, Notion, CRM-системи, хмарні або локальні рішення);</li>
+                        <li><strong>AI та LLM рішення:</strong> Розробка, промпт-інжиніринг, тонке налаштування (fine-tuning), конфігурація та підключення AI-асистентів, чат-ботів, LLM-моделей і мультимодальних RAG-систем до каналів зв'язку та робочих систем Замовника;</li>
+                        <li><strong>Технічний консалтинг та підтримка:</strong> IT-консалтинг, аудит цифрової архітектури, оптимізація бізнес-процесів, технічна підтримка та налаштування будь-якого супутнього програмного забезпечення та цифрової інфраструктури згідно з домовленістю із Замовником.</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-400">
+                        <strong>2.3. Специфікація завдань:</strong> Конкретний перелік завдань, технічних вимог, використовуваних платформ та строків виконання узгоджується Сторонами шляхом електронного листування (email, месенджери), опису в рахунку (інвойсі), технічному завданні або шляхом надання доступу до систем Замовника, і в будь-якому випадку повністю регулюється положеннями цієї Публічної оферти.
+                    </p>
+                    <p class="mt-2 text-sm text-gray-400">
+                        <strong>2.4. Залежність від сторонніх сервісів:</strong> Виконавець не несе відповідальності за збої в роботі, затримки, обмеження частоти запитів (rate limits), блокування, зміни тарифних планів або правил використання сторонніх платформ, хмарних провайдерів, API-сервісів чи AI-моделей (зокрема OpenAI, Anthropic, Google, Telegram, Meta, CRM та платіжних систем), що інтегровані в цифрову інфраструктуру Замовника.
+                    </p>
+                </section>
+
+                <!-- 3. Порядок акцепту -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">3.</span> Порядок акцепту (момент укладання договору)
+                    </h2>
+                    <p class="mb-3">
+                        <strong>3.1. Момент укладання:</strong> Договір вважається укладеним у повному обсязі без будь-яких застережень чи винятків у момент переходу за персональним платіжним посиланням (Pay-by-Link) та здійснення Замовником успішної оплати через інтернет-еквайринг або банківський переказ.
+                    </p>
+                    <p>
+                        <strong>3.2.</strong> Здійснення оплати підтверджує, що Замовник ознайомлений з технічним описом, строками, вартістю робіт та повністю погоджується з положеннями цієї Оферти.
+                    </p>
+                </section>
+
+                <!-- 4. Підтвердження надання послуг (заміна акта) -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">4.</span> Підтвердження надання послуг (заміна паперового акта)
+                    </h2>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-700 space-y-3">
+                        <p class="font-medium text-white">
+                            <strong>4.1. Юридичний пункт про прийняття робіт:</strong> Оплата послуг Замовником через платіжне посилання або банківський переказ є остаточним і безспірним підтвердженням належного надання послуг Виконавцем у повному обсязі, їх прийняття Замовником та повної відсутності претензій щодо якості, строків або змісту виконаних робіт.
+                        </p>
+                        <p class="text-sm text-gray-400">
+                            <strong>4.2. Первинний документ:</strong> Оплачений рахунок, електронна квитанція платіжної системи або банківська виписка є достатнім первинним документом, що замінює двосторонній підписаний Акт наданих послуг (відповідно до норм Закону України № 4496-VIII щодо усунення адміністративних бар'єрів для експорту послуг).
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 5. Вартість, оплата та податки -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">5.</span> Вартість, порядок розрахунків та податки
+                    </h2>
+                    <p class="mb-3">
+                        <strong>5.1. Форма оплати:</strong> Розрахунки проводяться онлайн у безготівковій формі через захищені платіжні сервіси (LiqPay, Stripe, WayForPay, Fondy) або шляхом прямого банківського переказу (IBAN / SWIFT / SEPA).
+                    </p>
+                    <p class="mb-3">
+                        <strong>5.2. Без ПДВ:</strong> Вартість послуг не включає ПДВ. Виконавець перебуває на спрощеній системі оподаткування (платник єдиного податку 3 групи) та не є платником ПДВ відповідно до Податкового кодексу України.
+                    </p>
+                    <p>
+                        <strong>5.3. Комісії:</strong> Усі можливі комісії банків-кореспондентів та витрати на конвертацію валют покриваються згідно з обраним платіжним методом та тарифами банку Замовника.
+                    </p>
+                </section>
+
+                <!-- 6. Політика повернення коштів -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">6.</span> Політика повернення коштів (Refund Policy)
+                    </h2>
+                    <p class="mb-3">
+                        <strong>6.1. Індивідуальний цифровий характер:</strong> Оскільки послуги мають індивідуальний нематеріальний характер (налаштування персональних робочих процесів, розробка скриптів та конфігурація під специфічні потреби клієнта), сплачені кошти після початку фактичного виконання робіт або їх завершення поверненню не підлягають.
+                    </p>
+                    <p>
+                        <strong>6.2.</strong> Будь-які зміни обсягу робіт або коригування конфігурацій узгоджуються Сторонами в електронному листуванні до початку реалізації.
+                    </p>
+                </section>
+
+                <!-- 7. Конфіденційність та інтелектуальна власність -->
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-blue-400">7.</span> Конфіденційність та інтелектуальна власність
+                    </h2>
+                    <p class="mb-3">
+                        <strong>7.1.</strong> Виконавець зобов'язується не розголошувати конфіденційні дані, API-ключі та бізнес-інформацію Замовника, отримані під час виконання налаштувань.
+                    </p>
+                    <p>
+                        <strong>7.2.</strong> Після здійснення повної оплати всі майнові права на використання розроблених рішень та створених сценаріїв переходять до Замовника.
+                    </p>
+                </section>
+
+                <!-- 8. Реквізити Виконавця -->
+                <section class="border-t border-gray-800 pt-6">
+                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <span class="text-blue-400">8.</span> Юридичні реквізити та контакти Виконавця
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                            <h3 class="font-bold text-white mb-2">Виконавець:</h3>
+                            <p><strong>Суб'єкт:</strong> ФОП Якубець Олексій</p>
+                            <p><strong>Країна реєстрації:</strong> Україна</p>
+                            <p><strong>РНОКПП (Tax ID):</strong> [YOUR_TAX_ID / РНОКПП]</p>
+                            <p><strong>КВЕД:</strong> 62.01, 62.02, 62.09, 63.11, 63.99</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                            <h3 class="font-bold text-white mb-2">Канали зв'язку та підтримка:</h3>
+                            <p><strong>Email:</strong> <a href="mailto:alexei.techhelp@gmail.com" class="text-blue-400 hover:underline">alexei.techhelp@gmail.com</a></p>
+                            <p><strong>Telegram:</strong> <a href="https://t.me/alirtrans" target="_blank" class="text-blue-400 hover:underline">@alirtrans</a></p>
+                            <p><strong>Телефон / WhatsApp:</strong> <a href="tel:+380501006060" class="text-blue-400 hover:underline">+38050 100 60 60</a></p>
+                            <p><strong>Сайт:</strong> <a href="index.html" class="text-blue-400 hover:underline">alexei-techhelp.github.io</a></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer Action inside Card -->
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-wrap items-center justify-between gap-4">
+                <a href="index.html" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span data-en="Return to Home" data-ua="Повернутися на головну">Return to Home</span>
+                </a>
+                <div class="flex gap-4 text-sm text-gray-500">
+                    <a href="privacy.html" class="hover:text-gray-300 transition">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="mailto:alexei.techhelp@gmail.com" class="hover:text-gray-300 transition">Contact Support</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Set dynamic date
+        const dateStr = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        document.querySelectorAll('.current-date').forEach(el => el.innerText = dateStr);
+
+        function setDocLang(lang) {
+            const contentEn = document.getElementById('content-en');
+            const contentUa = document.getElementById('content-ua');
+            const btnEn = document.getElementById('btn-en');
+            const btnUa = document.getElementById('btn-ua');
+
+            if (lang === 'ua') {
+                contentEn.classList.add('hidden');
+                contentUa.classList.remove('hidden');
+                btnUa.classList.add('active', 'text-white');
+                btnUa.classList.remove('text-gray-400');
+                btnEn.classList.remove('active', 'text-white');
+                btnEn.classList.add('text-gray-400');
+            } else {
+                contentUa.classList.add('hidden');
+                contentEn.classList.remove('hidden');
+                btnEn.classList.add('active', 'text-white');
+                btnEn.classList.remove('text-gray-400');
+                btnUa.classList.remove('active', 'text-white');
+                btnUa.classList.add('text-gray-400');
+            }
+        }
+    </script>
+</body>
+</html>

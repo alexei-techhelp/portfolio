@@ -32,7 +32,10 @@ const translations = {
         stage_5_text: "Profitability, time saved, and client satisfaction.",
         skills_title: "Tech Stack & Skills",
         skills_subtitle: "Tools and technologies I use to build scalable automation architectures.",
-        skills_footer: "If your business uses a specific custom tool or CRM, don't worry. As an Automation Architect, I quickly learn and integrate new software to implement your exact vision."
+        skills_footer: "If your business uses a specific custom tool or CRM, don't worry. As an Automation Architect, I quickly learn and integrate new software to implement your exact vision.",
+        footer_terms: "Terms & Public Offer",
+        footer_privacy: "Privacy Policy",
+        footer_contact: "Contact"
     },
     ua: {
         nav_about: "Про мене",
@@ -67,7 +70,10 @@ const translations = {
         stage_5_text: "Прибутковість, зекономлений час та задоволеність клієнтів.",
         skills_title: "Технологічний Стек",
         skills_subtitle: "Інструменти та технології, які я використовую для створення масштабованих архітектур.",
-        skills_footer: "Якщо ваш бізнес використовує специфічну CRM або унікальний софт — це не проблема. Я швидко опановую нові інструменти, щоб реалізувати вашу автоматизацію саме так, як вам потрібно."
+        skills_footer: "Якщо ваш бізнес використовує специфічну CRM або унікальний софт — це не проблема. Я швидко опановую нові інструменти, щоб реалізувати вашу автоматизацію саме так, як вам потрібно.",
+        footer_terms: "Публічна оферта (Terms of Service)",
+        footer_privacy: "Політика конфіденційності",
+        footer_contact: "Контакти"
     }
 };
 
